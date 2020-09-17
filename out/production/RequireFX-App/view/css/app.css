@@ -1,0 +1,49 @@
+.text{ -fx-font-smoothing-type:gray; }
+
+/** TOP */
+.header{-fx-background-color:#121519;}
+.header-window-button{-fx-background-color:#39444A;-fx-cursor:hand;-fx-background-radius:0;fx-border-insets:0 0 -1 0;}
+.header-window-button-min:hover{-fx-background-color:#45535A;}
+.header-window-button-close:hover{-fx-background-color:#ee6969;}
+
+/** SIDE MENU */
+.menu-item, .menu-item-selected{-fx-background-radius:0;-fx-padding:12 25;-fx-font-size:14; -fx-cursor:hand;}
+.menu-item{-fx-text-fill:#f7f9fe;-fx-background-color:#29313A;}
+.menu-item:hover{-fx-background-color:#35404A;}
+.menu-item-selected{-fx-text-fill:#55AAFF;-fx-background-color:#35404A;-fx-border-width:0 3 0 0;-fx-border-color:#55AAFF;}
+
+    /** Panes*/
+    .scroll-pane > .viewport{-fx-background-color:transparent;}
+    .scroll-pane{-fx-background-insets:0;-fx-padding:0;}
+    .scroll-pane:focused{-fx-background-insets: 0;}
+    .scroll-pane .corner{-fx-background-insets:0;-fx-background-color:#FFF;}
+    .scroll-bar:vertical{-fx-background-color:#FFF;}
+    .scroll-bar:vertical .thumb {-fx-background-color:#DDD;-fx-background-radius:10;}
+    .scroll-bar:horizontal .track, .scroll-bar:horizontal .thumb{-fx-background-color:transparent;}
+	.stack-pane{-fx-alignment:left;}
+	.transparent-panel{-fx-background-color:rgba(0,0,0,0.20)}
+	.scroll-list .scroll-bar:vertical{-fx-border-color:#DDD; -fx-border-width:0 1 1 0;}
+
+	/** PAGES */
+	.page-title{-fx-font-size:22; -fx-text-fill:#000;}
+	.split-pane *.split-pane-divider {-fx-padding: 0 1 0 1;-fx-background-color:#FFF;}
+	.split-pane{-fx-background-color:transparent;-fx-border-width:0;-fx-box-border-width:0}
+
+	/** TEXOS */
+	.header-title{-fx-font-size:26; -fx-padding:0 0 10 0;}
+	.subhead-title{-fx-font-size:14; -fx-fill:#5C6F78;-fx-padding:0 0 10 0;-fx-line-spacing:2;}
+	.paragraph{-fx-font-size:16; -fx-fill:#39444A;-fx-line-spacing:2.3;}
+
+	/** FORM*/
+	    .field-label{-fx-font-size:16; -fx-text-fill:#39444A; -fx-padding:5 0;}
+	    .field-textfield, .field-choicebox{-fx-background-color:#EBF0F5;-fx-background-radius:3;-fx-border-radius:3;-fx-vbox-margin:0 0 25 0;-fx-font-size:14;}
+	    .field-textfield{-fx-padding:10 15;-fx-border-color:#EBF0F5;}
+	    .field-choicebox{-fx-padding:5 10;}
+	    .field-textfield:focused{-fx-background-color:#fff; -fx-border-color:#00A8FF;}
+	    .field-submit{-fx-background-color:#0090EB;-fx-padding:12 28;-fx-font-size:14;-fx-text-fill:#fff;-fx-border-radius:50;-fx-background-radius:50;-fx-cursor:hand;}
+
+    	.input-shadow, .static-shadow{-fx-effect:dropshadow(three-pass-box, #ddd , 2.59, 0, 0, 0);}
+    	.input-shadow:hover{-fx-effect:dropshadow(three-pass-box, #09C , 2.59, 0, 0, 0);}
+
+	.scroll-pane > .viewport {  //not .scrollpane but .scroll-pane 
+	-fx-background-color: transparent;}

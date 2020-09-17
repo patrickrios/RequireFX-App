@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="427.0" prefWidth="453.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="36.0" layoutY="25.0" styleClass="page-title" text="Basic form" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="35.0" />
+      <VBox layoutX="25.0" layoutY="75.0" prefHeight="234.0" prefWidth="354.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Label styleClass="field-label" text="Field label">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <TextField promptText="placeholder" styleClass="field-textfield">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label styleClass="field-label" text="Field label" />
+            <TextField promptText="placeholder" styleClass="field-textfield">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Label styleClass="field-label" text="Field label" />
+            <ChoiceBox prefWidth="360.0" styleClass="field-choicebox">
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Button mnemonicParsing="false" styleClass="field-submit" text="Submit" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

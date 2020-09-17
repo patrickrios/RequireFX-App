@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="560.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label styleClass="header-title" text="Basic Page 3" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="subhead-title" text="Vivamus tellus augue, facilisis et feugiat vel, sagittis eu nibh. Mauris a tincidunt dui. Vestibulum ut posuere nisl, vitae fringilla ligula." wrappingWidth="531.9501953125">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragraph" text="Vivamus elementum ex nec elit viverra mattis. Cras finibus vehicula consequat. Quisque efficitur eleifend auctor. Duis vestibulum lacinia tristique. Fusce arcu augue, cursus vel tincidunt at, tincidunt eu metus. Nam rutrum sit amet velit ut consequat. Pellentesque placerat, nunc sit amet mattis sagittis, leo nisl commodo urna, in dictum metus sapien sed mauris. Morbi dolor nulla, bibendum eget aliquet quis, sodales a velit." wrappingWidth="532.359375">
+         <VBox.margin>
+            <Insets bottom="15.0" top="5.0" />
+         </VBox.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragraph" text=" Donec eget quam non massa suscipit placerat eget ut odio. Maecenas sed enim sed mauris bibendum interdum. Donec metus tortor, venenatis id scelerisque non, lacinia pharetra quam. Cras ac hendrerit turpis, ut pharetra sem. In vehicula, enim non placerat facilisis, mauris lacus egestas lacus, at dapibus sapien ligula sit amet ligula. Suspendisse consectetur porttitor lacinia. Sed at leo dignissim, auctor neque id, luctus lorem. Mauris ultrices velit id mauris fermentum ullamcorper. Duis sapien risus, rhoncus eu leo a, gravida porta enim. Nam congue egestas ornare. Donec fringilla fringilla diam, in suscipit turpis commodo ornare. " wrappingWidth="531.359375" />
+   </children>
+   <padding>
+      <Insets left="35.0" top="35.0" />
+   </padding>
+</VBox>

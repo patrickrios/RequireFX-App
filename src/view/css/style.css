@@ -1,0 +1,9 @@
+
+.split-pane *.split-pane-divider {-fx-padding: 0 1 0 1;-fx-background-color:#FFF;}
+.split-pane{-fx-background-color:transparent;-fx-border-width:0;}
+
+/** TOP */
+.header{-fx-background-color:#121519;}
+
+/** Sidebar Menu */
+.side-menu{-fx-background-color:#29313A;}

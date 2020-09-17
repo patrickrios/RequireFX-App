@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane fx:id="MainContainer" prefHeight="650.0" prefWidth="1366.0" style="-fx-background-color: #FFF; -fx-border-color: #343434;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.window.ViewportController">
+   <children>
+      <SplitPane dividerPositions="0.17302052785923755" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="29.0">
+        <items>
+            <AnchorPane fx:id="anchorMenu" maxWidth="500.0" minWidth="170.0" prefHeight="613.0" prefWidth="299.0" style="-fx-background-color: #29313A;" />
+            <StackPane fx:id="stackMainContent">
+               <children>
+                  <ScrollPane fx:id="ScrollMainContent" style="-fx-background-color: #F7F9FB;">
+                     <content>
+                        <AnchorPane fx:id="anchorpaneContent" style="-fx-background-color: #F7F9FB;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </StackPane>
+        </items>
+      </SplitPane>
+      <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #39444A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" style="-fx-text-fill: #f0f0f0;" text="Project name" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button mnemonicParsing="false" onAction="#closeApplication" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/window-close-min.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="header-window-button" />
+                  <String fx:value="header-window-button-close" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#maximizeStage" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/window-expande-min.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="header-window-button" />
+                  <String fx:value="header-window-button-min" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#minimizeStage" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/window-minimize-min.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="header-window-button" />
+                  <String fx:value="header-window-button-min" />
+               </styleClass>
+            </Button>
+            <ImageView fitHeight="11.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@../images/sample-logo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
