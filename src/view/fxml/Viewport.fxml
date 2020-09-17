@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -11,8 +10,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="MainContainer" prefHeight="650.0" prefWidth="1366.0" style="-fx-background-color: #FFF; -fx-border-color: #343434;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewportController">
    <children>
@@ -23,28 +20,7 @@
                <children>
                   <ScrollPane fx:id="ScrollMainContent" style="-fx-background-color: #F7F9FB;">
                      <content>
-                        <AnchorPane fx:id="mainContentConteiner" style="-fx-background-color: #F7F9FB;">
-                           <children>
-                              <VBox prefHeight="560.0" prefWidth="593.0">
-                                 <children>
-                                    <Label styleClass="header-title" text="Welcome to this sample project" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="subhead-title" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed eros at nisl fermentum viverra vel sit amet mi." wrappingWidth="531.9501953125">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragraph" text="Suspendisse at dolor mattis, volutpat purus in, imperdiet est. Nam vel nisl id orci tempor elementum non at nulla. Ut mollis eget metus vel pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit consectetur vulputate. Praesent sed nibh imperdiet, consectetur ligula ac, ornare leo. Aenean massa ligula, dapibus vel ligula et, varius dapibus diam. " wrappingWidth="532.359375">
-                                       <VBox.margin>
-                                          <Insets bottom="15.0" top="5.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragraph" text="Suspendisse at dolor mattis, volutpat purus in, imperdiet est. Nam vel nisl id orci tempor elementum non at nulla. Ut mollis eget metus vel pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit consectetur vulputate. Praesent sed nibh imperdiet, consectetur ligula ac, ornare leo. Aenean massa ligula, dapibus vel ligula et, varius dapibus diam. " wrappingWidth="531.359375" />
-                                 </children>
-                                 <padding>
-                                    <Insets left="35.0" top="35.0" />
-                                 </padding>
-                              </VBox>
-                           </children></AnchorPane>
+                        <AnchorPane fx:id="mainContentConteiner" style="-fx-background-color: #F7F9FB;" />
                      </content>
                   </ScrollPane>
                </children>

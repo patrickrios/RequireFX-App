@@ -23,7 +23,7 @@ public class ViewportController implements Initializable{
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		//addMainMenu();
+		initializeProjectSelection();
 	}
 	
 	@FXML
@@ -56,4 +56,13 @@ public class ViewportController implements Initializable{
 			e.printStackTrace();
 		}
     }
+
+    private void initializeProjectSelection(){
+		try {
+			Parent selection =  FXMLLoader.load(getClass().getResource("/view/fxml/ProjectSelectionPage.fxml"));
+			this.mainContentConteiner.getChildren().setAll(selection);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

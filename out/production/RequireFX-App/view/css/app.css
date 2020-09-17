@@ -1,4 +1,5 @@
 .text{ -fx-font-smoothing-type:gray; }
+.button-reset{-fx-background-color:transparent;-fx-padding:0;}
 
 /** TOP */
 .header{-fx-background-color:#121519;}
@@ -35,13 +36,15 @@
 	.paragraph{-fx-font-size:16; -fx-fill:#39444A;-fx-line-spacing:2.3;}
 
 	/** FORM*/
+	    /** Inputs */
 	    .field-label{-fx-font-size:16; -fx-text-fill:#39444A; -fx-padding:5 0;}
-	    .field-textfield, .field-choicebox{-fx-background-color:#EBF0F5;-fx-background-radius:3;-fx-border-radius:3;-fx-vbox-margin:0 0 25 0;-fx-font-size:14;}
+	    .field-textfield, .field-choicebox, .field-textarea .content{-fx-background-color:#EBF0F5;-fx-background-radius:3;-fx-border-radius:3;-fx-vbox-margin:0 0 25 0;-fx-font-size:14;}
 	    .field-textfield{-fx-padding:10 15;-fx-border-color:#EBF0F5;}
+	    .field-textarea .content{-fx-background-color:#EBF0F5;}
 	    .field-choicebox{-fx-padding:5 10;}
-	    .field-textfield:focused{-fx-background-color:#fff; -fx-border-color:#00A8FF;}
-	    .field-submit{-fx-background-color:#0090EB;-fx-padding:12 28;-fx-font-size:14;-fx-text-fill:#fff;-fx-border-radius:50;-fx-background-radius:50;-fx-cursor:hand;}
-
+	    .field-textfield:focused, .field-textarea:focused .content{-fx-background-color:#fff; -fx-border-color:#00A8FF;}
+	    /** Buttons*/
+	    .field-submit{-fx-background-color:#0090EB; -fx-padding:12 28;-fx-font-size:14;-fx-text-fill:#fff;-fx-border-radius:50;-fx-background-radius:50;-fx-cursor:hand;}
     	.input-shadow, .static-shadow{-fx-effect:dropshadow(three-pass-box, #ddd , 2.59, 0, 0, 0);}
     	.input-shadow:hover{-fx-effect:dropshadow(three-pass-box, #09C , 2.59, 0, 0, 0);}
 
