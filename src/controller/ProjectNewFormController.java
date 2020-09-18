@@ -4,11 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 
 public class ProjectNewFormController {
     @FXML
@@ -37,7 +34,7 @@ public class ProjectNewFormController {
     }
 
     @FXML
-    void verifyInputName(KeyEvent event){
+    void verifyInputName(){
         String input = inputProjectName.getText();
 
         if( input.length() < 5) {
