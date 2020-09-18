@@ -2,7 +2,7 @@ package main;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import model.Viewport;
+import model.entity.Viewport;
 
 public class Main extends Application{
 	

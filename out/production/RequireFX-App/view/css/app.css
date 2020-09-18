@@ -43,10 +43,11 @@
 	    .field-textarea .content{-fx-background-color:#EBF0F5;}
 	    .field-choicebox{-fx-padding:5 10;}
 	    .field-textfield:focused, .field-textarea:focused .content{-fx-background-color:#fff; -fx-border-color:#00A8FF;}
+	    .field-textfield-exception{-fx-border-color:#ef233c;}
 	    /** Buttons*/
 	    .field-submit{-fx-background-color:#0090EB; -fx-padding:12 28;-fx-font-size:14;-fx-text-fill:#fff;-fx-border-radius:50;-fx-background-radius:50;-fx-cursor:hand;}
     	/** Labels */
-    	.field-exception{-fx-font-size:12;-fx-text-fill:#ee6969;}
+    	.field-exception{-fx-font-size:12;-fx-text-fill:#ef233c;}
 
     	.input-shadow, .static-shadow{-fx-effect:dropshadow(three-pass-box, #ddd , 2.59, 0, 0, 0);}
     	.input-shadow:hover{-fx-effect:dropshadow(three-pass-box, #09C , 2.59, 0, 0, 0);}

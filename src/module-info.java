@@ -5,7 +5,9 @@ module RequireFX.App {
 
     opens main;
     opens controller;
-    opens model;
+    opens model.entity;
+    opens model.exception;
+    opens model.util;
     opens view.css;
     opens view.fxml;
     opens view.images;

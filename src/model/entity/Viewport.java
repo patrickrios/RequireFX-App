@@ -1,4 +1,4 @@
-package model;
+package model.entity;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;

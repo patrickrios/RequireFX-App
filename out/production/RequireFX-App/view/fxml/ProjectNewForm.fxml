@@ -8,49 +8,54 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorProjectNewForm" prefHeight="650.0" prefWidth="900.0" styleClass="transparent-panel" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectNewFormController">
+<HBox fx:id="anchorProjectNewForm" alignment="CENTER" prefHeight="650.0" prefWidth="900.0" styleClass="transparent-panel" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectNewFormController">
    <children>
-      <AnchorPane layoutX="139.0" layoutY="63.0" prefHeight="451.0" prefWidth="538.0" style="-fx-background-color: #fff;">
+      <VBox alignment="CENTER">
          <children>
-            <Label layoutX="36.0" layoutY="25.0" styleClass="page-title" text="Criar novo projeto" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0" />
-            <VBox layoutX="25.0" layoutY="75.0" prefHeight="379.0" prefWidth="505.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+            <AnchorPane prefHeight="451.0" prefWidth="538.0" style="-fx-background-color: #fff;">
                <children>
-                  <Label styleClass="field-label" text="Nome do projeto">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </Label>
-                  <TextField fx:id="inputProjectName" promptText="Insira um nome válido" styleClass="field-textfield">
-                     <VBox.margin>
-                        <Insets bottom="3.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label fx:id="labelNameException" styleClass="field-exception">
-                     <VBox.margin>
-                        <Insets bottom="8.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label styleClass="field-label" text="Descriçao (opcional)" />
-                  <TextArea prefHeight="300.0" prefWidth="200.0" promptText="Descreve seu projeto em algumas palavras" styleClass="field-textarea">
-                     <VBox.margin>
-                        <Insets bottom="25.0" />
-                     </VBox.margin>
-                  </TextArea>
-                  <Button mnemonicParsing="false" onAction="#createProject" styleClass="field-submit" text="Criar e editar" />
+                  <Label layoutX="36.0" layoutY="25.0" styleClass="page-title" text="Criar novo projeto" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0" />
+                  <VBox layoutX="25.0" layoutY="75.0" prefHeight="379.0" prefWidth="505.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+                     <children>
+                        <Label styleClass="field-label" text="Nome do projeto">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <TextField fx:id="inputProjectName" onKeyReleased="#verifyInputName" promptText="Deve conter pelo menos 5 caracteres" styleClass="field-textfield">
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="labelNameException" styleClass="field-exception">
+                           <VBox.margin>
+                              <Insets bottom="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label styleClass="field-label" text="Descriçao (opcional)" />
+                        <TextArea prefHeight="300.0" prefWidth="200.0" promptText="Descreve seu projeto em algumas palavras" styleClass="field-textarea">
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button fx:id="buttonSubmit" disable="true" mnemonicParsing="false" onAction="#createProject" styleClass="field-submit" text="Criar e editar" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="433.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeForm" styleClass="button-reset" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                     <graphic>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/project/close-tab-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
-            </VBox>
-            <Button layoutX="433.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeForm" styleClass="button-reset" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
-               <graphic>
-                  <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/project/close-tab-icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            </AnchorPane>
          </children>
-      </AnchorPane>
+      </VBox>
    </children>
-</AnchorPane>
+</HBox>

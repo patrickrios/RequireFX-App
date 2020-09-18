@@ -89,13 +89,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/view/images" />
+      <recent name="$PROJECT_DIR$/src/view/images/project" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/view/fxml" />
       <recent name="$PROJECT_DIR$/src/view/fxml/project" />
-      <recent name="$PROJECT_DIR$/src/view/images/project" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/view/images" />
       <recent name="$PROJECT_DIR$/src/view/images/project" />
     </key>
   </component>
@@ -232,22 +232,26 @@
       <screen x="0" y="0" width="1366" height="729" />
     </state>
     <state x="411" y="121" width="524" height="482" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.729@0.0.1366.729" timestamp="1600354005187" />
-    <state width="1343" height="2" key="GridCell.Tab.0.bottom" timestamp="1600376551723">
+    <state x="461" y="122" width="424" height="482" key="FileChooserDialogImpl" timestamp="1600380626709">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="2" key="GridCell.Tab.0.bottom/0.0.1366.729@0.0.1366.729" timestamp="1600376551723" />
-    <state width="1343" height="2" key="GridCell.Tab.0.center" timestamp="1600376551722">
+    <state x="461" y="122" width="424" height="482" key="FileChooserDialogImpl/0.0.1366.729@0.0.1366.729" timestamp="1600380626709" />
+    <state width="1343" height="24" key="GridCell.Tab.0.bottom" timestamp="1600385496424">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="2" key="GridCell.Tab.0.center/0.0.1366.729@0.0.1366.729" timestamp="1600376551722" />
-    <state width="1343" height="2" key="GridCell.Tab.0.left" timestamp="1600376551722">
+    <state width="1343" height="24" key="GridCell.Tab.0.bottom/0.0.1366.729@0.0.1366.729" timestamp="1600385496424" />
+    <state width="1343" height="24" key="GridCell.Tab.0.center" timestamp="1600385496424">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="2" key="GridCell.Tab.0.left/0.0.1366.729@0.0.1366.729" timestamp="1600376551722" />
-    <state width="1343" height="2" key="GridCell.Tab.0.right" timestamp="1600376551723">
+    <state width="1343" height="24" key="GridCell.Tab.0.center/0.0.1366.729@0.0.1366.729" timestamp="1600385496424" />
+    <state width="1343" height="24" key="GridCell.Tab.0.left" timestamp="1600385496423">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="2" key="GridCell.Tab.0.right/0.0.1366.729@0.0.1366.729" timestamp="1600376551723" />
+    <state width="1343" height="24" key="GridCell.Tab.0.left/0.0.1366.729@0.0.1366.729" timestamp="1600385496423" />
+    <state width="1343" height="24" key="GridCell.Tab.0.right" timestamp="1600385496424">
+      <screen x="0" y="0" width="1366" height="729" />
+    </state>
+    <state width="1343" height="24" key="GridCell.Tab.0.right/0.0.1366.729@0.0.1366.729" timestamp="1600385496424" />
     <state width="1343" height="25" key="GridCell.Tab.1.bottom" timestamp="1600363489840">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
@@ -264,10 +268,10 @@
       <screen x="0" y="0" width="1366" height="729" />
     </state>
     <state width="1343" height="25" key="GridCell.Tab.1.right/0.0.1366.729@0.0.1366.729" timestamp="1600363489840" />
-    <state x="166" y="0" width="1024" height="728" key="SettingsEditor" timestamp="1600355365187">
+    <state x="166" y="0" width="1024" height="728" key="SettingsEditor" timestamp="1600387206434">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state x="166" y="0" width="1024" height="728" key="SettingsEditor/0.0.1366.729@0.0.1366.729" timestamp="1600355365187" />
+    <state x="166" y="0" width="1024" height="728" key="SettingsEditor/0.0.1366.729@0.0.1366.729" timestamp="1600387206434" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1600356044033">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
