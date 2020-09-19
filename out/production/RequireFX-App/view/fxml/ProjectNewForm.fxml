@@ -36,7 +36,7 @@
                            </VBox.margin>
                         </Label>
                         <Label styleClass="field-label" text="Descriçao (opcional)" />
-                        <TextArea prefHeight="300.0" prefWidth="200.0" promptText="Descreve seu projeto em algumas palavras" styleClass="field-textarea">
+                        <TextArea fx:id="inputDescription" prefHeight="300.0" prefWidth="200.0" promptText="Descreve seu projeto em algumas palavras" styleClass="field-textarea">
                            <VBox.margin>
                               <Insets bottom="25.0" />
                            </VBox.margin>

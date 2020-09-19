@@ -3,9 +3,13 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import model.entity.Project;
+import model.exception.AlreadyExistsExpcetion;
+import model.exception.InputToShortException;
 
 public class ProjectNewFormController {
     @FXML
@@ -15,7 +19,10 @@ public class ProjectNewFormController {
     @FXML
     private Label labelNameException;
     @FXML
+    private TextArea inputDescription;
+    @FXML
     private Button buttonSubmit;
+    private Project project;
 
     @FXML
     void closeForm() {
@@ -25,33 +32,42 @@ public class ProjectNewFormController {
 
     @FXML
     void createProject() {
-        //TODO
         String name = inputProjectName.getText();
-        labelNameException.setText("Salvou o projeto "+name);
-        //montar objeto de modelo
-        //salvar no db
-        //informar usuário
+        String desc = inputDescription.getText();
+        try {
+            project = new Project(name, desc);
+            project.saveNewProject();
+            labelNameException.setText("Projeto salvo");
+            this.inputProjectName.setText("");
+            this.inputDescription.setText("");
+        }
+        catch (Exception e) {
+            labelNameException.setText("Não salvou");
+        }
     }
 
     @FXML
     void verifyInputName(){
         String input = inputProjectName.getText();
-
-        if( input.length() < 5) {
-            labelNameException.setText("Muito curto");
-            buttonSubmit.setDisable(true);
-        }
-        else if(alreadyExist(input)){
-            //TODO verificar existência
-            labelNameException.setText("já existe");
-            buttonSubmit.setDisable(true);
-        }else{
+        try {
+            verifyLength(input);
+            project = new Project(input, "");
+            project.verifyExistence();
             buttonSubmit.setDisable(false);
             labelNameException.setText("");
         }
+        catch (InputToShortException e) {
+            labelNameException.setText("Muito curto");
+            buttonSubmit.setDisable(true);
+        }
+        catch (AlreadyExistsExpcetion alreadyExistsExpcetion) {
+            labelNameException.setText("Já existe");
+            buttonSubmit.setDisable(true);
+        }
     }
 
-    private boolean alreadyExist(String name){
-        return name.equals("buceta");
+    private void verifyLength(String string) throws InputToShortException {
+        if (string.length() < 5)
+            throw new InputToShortException();
     }
 }

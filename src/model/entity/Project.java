@@ -1,5 +1,7 @@
 package model.entity;
 
+import model.dao.ProjectDAO;
+import model.exception.AlreadyExistsExpcetion;
 import java.security.Timestamp;
 
 public class Project {
@@ -14,11 +16,12 @@ public class Project {
         this.description = description;
     }
 
-    public void verifyExistence(){
-        //TODO
+    public void verifyExistence() throws AlreadyExistsExpcetion {
+        if( new ProjectDAO().findByName(this.name) )
+            throw new AlreadyExistsExpcetion(this.name);
     }
 
-    public void saveNewProject(){
-        //TODO
+    public void saveNewProject() {
+        new ProjectDAO().create(this.name, this.description);
     }
 }
