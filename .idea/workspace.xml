@@ -52,8 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -233,10 +233,10 @@
       <screen x="0" y="0" width="1366" height="729" />
     </state>
     <state x="141" y="0" width="1084" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.729@0.0.1366.729" timestamp="1600513943947" />
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1600511329562">
+    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1600514197871">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.729@0.0.1366.729" timestamp="1600511329562" />
+    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.729@0.0.1366.729" timestamp="1600514197871" />
     <state x="415" y="157" width="525" height="413" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600513941196">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
@@ -253,22 +253,22 @@
       <screen x="0" y="0" width="1366" height="729" />
     </state>
     <state x="461" y="122" width="610" height="482" key="FileChooserDialogImpl/0.0.1366.729@0.0.1366.729" timestamp="1600475406058" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1600513783866">
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1600519644785">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.0.1366.729@0.0.1366.729" timestamp="1600513783866" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1600513783865">
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.0.1366.729@0.0.1366.729" timestamp="1600519644785" />
+    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1600519644784">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.center/0.0.1366.729@0.0.1366.729" timestamp="1600513783865" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1600513783865">
+    <state width="1320" height="172" key="GridCell.Tab.0.center/0.0.1366.729@0.0.1366.729" timestamp="1600519644784" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1600519644784">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.left/0.0.1366.729@0.0.1366.729" timestamp="1600513783865" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1600513783866">
+    <state width="1320" height="172" key="GridCell.Tab.0.left/0.0.1366.729@0.0.1366.729" timestamp="1600519644784" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1600519644785">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.right/0.0.1366.729@0.0.1366.729" timestamp="1600513783866" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right/0.0.1366.729@0.0.1366.729" timestamp="1600519644785" />
     <state width="1343" height="25" key="GridCell.Tab.1.bottom" timestamp="1600483803395">
       <screen x="0" y="0" width="1366" height="729" />
     </state>

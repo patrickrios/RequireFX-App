@@ -14,6 +14,11 @@ public class Project{
     private Timestamp created;
     private Timestamp lastUpdate;
 
+    public Project(String name, String description, int id){
+        this.name = name;
+        this.description = description;
+        this.ID = id;
+    }
     public Project(String name, String description){
         this.name = name;
         this.description = description;
@@ -34,5 +39,9 @@ public class Project{
 
     public String getDescription() {
         return description;
+    }
+
+    public int getID() {
+        return ID;
     }
 }

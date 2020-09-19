@@ -12,6 +12,7 @@ module RequireFX.App {
     opens model.dao;
     opens model.util;
     opens view.css;
+    opens view.effects;
     opens view.fxml;
     opens view.images;
 }

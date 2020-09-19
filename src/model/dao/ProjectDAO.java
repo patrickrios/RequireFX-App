@@ -35,9 +35,10 @@ public class ProjectDAO implements Listable {
     public ArrayList<Project> loadGroup(int offset, int limit) {
         FindGroup group = new FindGroup(this.table);
         ArrayList<Project> list = new ArrayList<>();
+        this.columns.add("project_id");
         for(Object o : group.getItems(this.columns, offset, limit)){
             ArrayList<Object> datas = (ArrayList<Object>) o;
-            list.add(new Project(datas.get(0).toString(), datas.get(1).toString()) );
+            list.add(new Project(datas.get(0).toString(), datas.get(1).toString(), (int)datas.get(2)) );
         }
         return list;
     }

@@ -79,4 +79,7 @@
    <effect>
       <DropShadow />
    </effect>
+   <userData>
+      <fx:reference source="controller" />
+   </userData>
 </AnchorPane>

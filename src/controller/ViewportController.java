@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import view.effects.FadeEffectTransition;
 
 public class ViewportController implements Initializable{
 	@FXML
@@ -44,19 +45,23 @@ public class ViewportController implements Initializable{
     	stage.setY(0.0);
     }
     
-    private void addMainMenu() {
+    public void addMainMenu() {
     	FXMLLoader load = new FXMLLoader(getClass().getResource("/view/fxml/MainMenu.fxml"));
 		try {
-			Parent p = load.load();
+			Parent menu = load.load();
 			MainMenuController c = load.getController();
 			c.initi(this.mainContentConteiner);
-			this.anchorMenu.getChildren().setAll(p);
+			new FadeEffectTransition(menu);
+			this.anchorMenu.getChildren().setAll(menu);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
     }
 
+    public void setProjectName(String name){
+		this.labelProjectName.setText(name);
+	}
     private void initializeProjectSelection(){
 		try {
 			Parent selection =  FXMLLoader.load(getClass().getResource("/view/fxml/ProjectSelectionPage.fxml"));
