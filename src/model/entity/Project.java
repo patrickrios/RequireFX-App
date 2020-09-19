@@ -2,9 +2,12 @@ package model.entity;
 
 import model.dao.ProjectDAO;
 import model.exception.AlreadyExistsExpcetion;
-import java.security.Timestamp;
+import model.util.Listable;
 
-public class Project {
+import java.security.Timestamp;
+import java.util.ArrayList;
+
+public class Project{
     private int ID;
     private String name;
     private String description;
@@ -23,5 +26,13 @@ public class Project {
 
     public void saveNewProject() {
         new ProjectDAO().create(this.name, this.description);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

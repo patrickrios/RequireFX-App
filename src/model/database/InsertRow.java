@@ -1,5 +1,7 @@
 package model.database;
 
+import model.exception.MissingParameterException;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,12 +15,14 @@ public class InsertRow extends DAO
     }
 
     public void insert(ArrayList<String> columns, ArrayList<?> values){
+
         try {
+            if (columns.size() != values.size()) throw new MissingParameterException(this.insert);
             this.prepareInsertStatement(columns);
             PreparedStatement query = super.defineValues(values, this.insert);
             query.executeUpdate();
         }
-        catch (SQLException throwables) {
+        catch (SQLException | MissingParameterException throwables) {
             throwables.printStackTrace();
         }
     }

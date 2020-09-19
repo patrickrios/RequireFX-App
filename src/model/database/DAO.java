@@ -73,4 +73,16 @@ import java.util.ArrayList;
          return statement;
      }
 
+     protected String prepareColumns(ArrayList<String> columns){
+        StringBuilder columnList = new StringBuilder();
+        int i = 0;
+        for (String col : columns){
+            columnList.append(col);
+            if(i+1 < columns.size())
+                columnList.append(", ");
+            i++;
+        }
+        return columnList.toString();
+     }
+
 }

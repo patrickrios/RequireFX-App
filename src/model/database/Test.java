@@ -1,20 +1,17 @@
 package model.database;
 
-import java.sql.Timestamp;
+import model.dao.ProjectDAO;
+import model.entity.Project;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Test {
     public static void main(String[] args) {
-        ArrayList<Object> values = new ArrayList<>();
-        values.add("Teste string builder");
-        values.add(23);
-        values.add(234.45f);
-        values.add(new Timestamp(new Date().getTime()));
 
+        ProjectDAO dao = new ProjectDAO();
+        ArrayList<Project> items = dao.loadGroup(0, 15);
 
-        for (Object o : values){
-            System.out.println(o.getClass().getTypeName());
+        for (Project p : items){
+            System.out.println(p.getName()+", "+p.getDescription());
         }
 
     }

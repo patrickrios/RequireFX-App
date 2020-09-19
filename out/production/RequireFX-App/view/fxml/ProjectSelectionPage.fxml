@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectSelectionPageController">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectSelectionPageController">
    <children>
       <Button mnemonicParsing="false" onAction="#openNewProjectForm" style="-fx-background-color: #54478c; -fx-text-fill: #fff; -fx-font-size: 16; -fx-cursor: hand;" text="Novo projeto" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="25.0">
          <graphic>
