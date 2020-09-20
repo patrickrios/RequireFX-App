@@ -28,7 +28,7 @@ public class ProjectItemController {
         c.setProjectName(projectName.getText());
 
         try {
-            Parent home = FXMLLoader.load(getClass().getResource("/view/fxml/Homepage.fxml"));
+            Parent home = FXMLLoader.load(getClass().getResource("/view/fxml/RequireList.fxml"));
             c.addMainContent(home);
         } catch (IOException e) {
             e.printStackTrace();

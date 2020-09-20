@@ -43,7 +43,7 @@ public class MainMenuController {
     void displayHomepage(ActionEvent event) {
     	setMenuItem(event);
 		try {
-			Parent home = FXMLLoader.load(getClass().getResource("/view/fxml/Homepage.fxml"));
+			Parent home = FXMLLoader.load(getClass().getResource("/view/fxml/RequireList.fxml"));
 			this.mainContentContainer.getChildren().setAll(home);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -61,24 +61,18 @@ public class MainMenuController {
 		}
 	}
 
-    @FXML
-    void displayReport(ActionEvent event) {
-    	setMenuItem(event);
-    	//TODO
-	}
-
 	private void setMenuItem(ActionEvent event) {
 		Button pressed = (Button)event.getSource();
 		String pressedID = "#"+pressed.getId();
 		resetSelectedButton(pressedID);
 		switchStyleClass(pressed, "menu-item-selected");
-		switchIcon(pressed, this.menuIcons.get(pressedID)+"blue.png");
+		//switchIcon(pressed, this.menuIcons.get(pressedID)+"blue.png");
 	}
 	
 	private void resetSelectedButton(String newId) {
 		Button current = (Button)mainContentContainer.getScene().lookup(this.selectedID);
 		switchStyleClass(current, "menu-item");
-		switchIcon(current, menuIcons.get(this.selectedID)+"light.png");
+		//switchIcon(current, menuIcons.get(this.selectedID)+"light.png");
 		this.selectedID = newId;
 	}
 	
