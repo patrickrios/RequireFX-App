@@ -4,7 +4,6 @@ import model.database.FindGroup;
 import model.database.FindRow;
 import model.database.InsertRow;
 import model.entity.Project;
-import model.exception.MissingParameterException;
 import model.util.Listable;
 
 import java.util.ArrayList;

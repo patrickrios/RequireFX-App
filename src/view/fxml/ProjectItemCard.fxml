@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="135.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectItemController">
+   <children>
+      <Label fx:id="projectName" layoutX="14.0" layoutY="14.0" style="-fx-font-size: 22;" text="Name" />
+      <Button layoutX="14.0" layoutY="95.0" mnemonicParsing="false" onAction="#openProject" styleClass="project-open" text="Abrir">
+         <graphic>
+            <ImageView fitHeight="11.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/open-project-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="199.0" layoutY="14.0" mnemonicParsing="false" styleClass="project-option" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <graphic>
+            <ImageView fitHeight="13.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/project-option-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <styleClass>
+      <String fx:value="input-shadow" />
+      <String fx:value="project-card" />
+   </styleClass>
+</AnchorPane>

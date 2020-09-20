@@ -14,7 +14,6 @@ import model.util.List;
 import view.effects.FadeEffectTransition;
 
 import java.io.IOException;
-import java.io.PipedReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -37,7 +36,7 @@ public class ProjectSelectionPageController implements Initializable {
     }
 
     private void loadItem(String project, int id){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectItem.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectItemCard.fxml"));
         try {
             Parent item = loader.load();
             ProjectItemController c = loader.getController();

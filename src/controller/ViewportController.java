@@ -62,6 +62,11 @@ public class ViewportController implements Initializable{
     public void setProjectName(String name){
 		this.labelProjectName.setText(name);
 	}
+
+	public void addMainContent(Parent parent){
+		new FadeEffectTransition(parent);
+		this.mainContentConteiner.getChildren().setAll(parent);
+	}
     private void initializeProjectSelection(){
 		try {
 			Parent selection =  FXMLLoader.load(getClass().getResource("/view/fxml/ProjectSelectionPage.fxml"));

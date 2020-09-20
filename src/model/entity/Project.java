@@ -2,10 +2,7 @@ package model.entity;
 
 import model.dao.ProjectDAO;
 import model.exception.AlreadyExistsExpcetion;
-import model.util.Listable;
-
 import java.security.Timestamp;
-import java.util.ArrayList;
 
 public class Project{
     private int ID;

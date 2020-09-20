@@ -1,12 +1,12 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-
-import java.util.Scanner;
+import java.io.IOException;
 
 public class ProjectItemController {
     @FXML
@@ -26,5 +26,12 @@ public class ProjectItemController {
         ViewportController c = (ViewportController) main.getUserData();
         c.addMainMenu();
         c.setProjectName(projectName.getText());
+
+        try {
+            Parent home = FXMLLoader.load(getClass().getResource("/view/fxml/Homepage.fxml"));
+            c.addMainContent(home);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

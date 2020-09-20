@@ -30,10 +30,15 @@
 	.split-pane *.split-pane-divider {-fx-padding: 0 1 0 1;-fx-background-color:#FFF;}
 	.split-pane{-fx-background-color:transparent;-fx-border-width:0;-fx-box-border-width:0}
 
-	/** TEXOS */
+	/** TEXTOS */
 	.header-title{-fx-font-size:26; -fx-padding:0 0 10 0;}
 	.subhead-title{-fx-font-size:14; -fx-fill:#5C6F78;-fx-padding:0 0 10 0;-fx-line-spacing:2;}
 	.paragraph{-fx-font-size:16; -fx-fill:#39444A;-fx-line-spacing:2.3;}
+
+    /** PROJECT */
+    .project-card{-fx-background-color:#fff;}
+    .project-open{-fx-background-color:#ECF1FF; -fx-text-fill:#5A88C5;}
+    .project-option{-fx-background-color:#f7f9fe;-fx-background-radius:30; -fx-border-radius:30;}
 
 	/** FORM*/
 	    /** Inputs */
