@@ -53,7 +53,6 @@ public class ViewportController implements Initializable{
 			c.initi(this.mainContentConteiner);
 			new FadeEffectTransition(menu);
 			this.anchorMenu.getChildren().setAll(menu);
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -74,5 +73,12 @@ public class ViewportController implements Initializable{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@FXML
+	void closeProject(){
+		anchorMenu.getChildren().clear();
+		initializeProjectSelection();
+		labelProjectName.setText("");
 	}
 }

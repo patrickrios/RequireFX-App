@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -59,6 +60,14 @@ public class MainMenuController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@FXML
+	void closeProject(){
+		Scene scene = this.mainContentContainer.getScene();
+		AnchorPane main = (AnchorPane) scene.lookup("#MainContainer");
+		ViewportController c = (ViewportController) main.getUserData();
+		c.closeProject();
 	}
 
 	private void setMenuItem(ActionEvent event) {
