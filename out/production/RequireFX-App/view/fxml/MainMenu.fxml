@@ -6,8 +6,7 @@
 <AnchorPane fx:id="AnchorSidebar" maxWidth="500.0" minWidth="170.0" prefHeight="613.0" prefWidth="299.0" style="-fx-background-color: #29313A;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
    <children>
       <Button fx:id="MenuItemHome" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#displayHomepage" styleClass="menu-item-selected" text="Requisitos" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0" />
-      <Button fx:id="MenuItemAddNew" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutY="64.0" mnemonicParsing="false" onAction="#displayAddNewForm" styleClass="menu-item" text="Cronograma" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0" />
-      <Button fx:id="MenuItemList" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutY="108.0" mnemonicParsing="false" onAction="#displayList" styleClass="menu-item" text="Quadro de tarefas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0" />
-      <Button fx:id="MenuItemExit" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutY="150.0" mnemonicParsing="false" onAction="#closeProject" styleClass="menu-item" text="Sair" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0" />
+      <Button fx:id="MenuItemAddNew" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutY="64.0" mnemonicParsing="false" onAction="#displayAddNewForm" styleClass="side-menu-item" text="Cronograma" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0" />
+      <Button fx:id="MenuItemList" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutY="108.0" mnemonicParsing="false" onAction="#displayList" styleClass="side-menu-item" text="Quadro de tarefas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0" />
    </children>
 </AnchorPane>

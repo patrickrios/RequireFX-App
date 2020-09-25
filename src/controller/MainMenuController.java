@@ -62,14 +62,6 @@ public class MainMenuController {
 		}
 	}
 
-	@FXML
-	void closeProject(){
-		Scene scene = this.mainContentContainer.getScene();
-		AnchorPane main = (AnchorPane) scene.lookup("#MainContainer");
-		ViewportController c = (ViewportController) main.getUserData();
-		c.closeProject();
-	}
-
 	private void setMenuItem(ActionEvent event) {
 		Button pressed = (Button)event.getSource();
 		String pressedID = "#"+pressed.getId();
@@ -80,7 +72,7 @@ public class MainMenuController {
 	
 	private void resetSelectedButton(String newId) {
 		Button current = (Button)mainContentContainer.getScene().lookup(this.selectedID);
-		switchStyleClass(current, "menu-item");
+		switchStyleClass(current, "side-menu-item");
 		//switchIcon(current, menuIcons.get(this.selectedID)+"light.png");
 		this.selectedID = newId;
 	}

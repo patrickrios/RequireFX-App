@@ -6,11 +6,12 @@
 .header-window-button{-fx-background-color:#39444A;-fx-cursor:hand;-fx-background-radius:0;fx-border-insets:0 0 -1 0;}
 .header-window-button-min:hover{-fx-background-color:#45535A;}
 .header-window-button-close:hover{-fx-background-color:#ee6969;}
+.project-menu-button{-fx-background-color:rgba(0,0,0,0.10); -fx-text-fill:#eee; -fx-padding: 2 10;}
 
 /** SIDE MENU */
-.menu-item, .menu-item-selected{-fx-background-radius:0;-fx-padding:12 25;-fx-font-size:14; -fx-cursor:hand;}
-.menu-item{-fx-text-fill:#f7f9fe;-fx-background-color:#29313A;}
-.menu-item:hover{-fx-background-color:#35404A;}
+.side-menu-item, .menu-item-selected{-fx-background-radius:0;-fx-padding:12 25;-fx-font-size:14; -fx-cursor:hand;}
+.side-menu-item{-fx-text-fill:#f7f9fe;-fx-background-color:#29313A;}
+.side-menu-item:hover{-fx-background-color:#35404A;}
 .menu-item-selected{-fx-text-fill:#55AAFF;-fx-background-color:#35404A;-fx-border-width:0 3 0 0;-fx-border-color:#55AAFF;}
 
     /** Panes*/

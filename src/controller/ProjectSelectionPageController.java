@@ -12,7 +12,6 @@ import model.dao.ProjectDAO;
 import model.entity.Project;
 import model.util.List;
 import view.effects.FadeEffectTransition;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

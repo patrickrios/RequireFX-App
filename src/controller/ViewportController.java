@@ -7,7 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import view.effects.FadeEffectTransition;
@@ -20,17 +21,21 @@ public class ViewportController implements Initializable{
 	@FXML
 	private AnchorPane mainContentConteiner;
 	@FXML
-	private Label labelProjectName;
+	private MenuButton projectButton;
+	@FXML
+	private Button projectExitButton;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		projectButton.setVisible(false);
+		projectExitButton.setVisible(false);
 		initializeProjectSelection();
 	}
 	
 	@FXML
     void minimizeStage() {
-    	Stage stage = (Stage)MainContainer.getScene().getWindow();
-    	stage.setIconified(true);
+		Stage stage = (Stage)MainContainer.getScene().getWindow();
+		stage.setIconified(true);
     }
     
     @FXML
@@ -59,7 +64,9 @@ public class ViewportController implements Initializable{
     }
 
     public void setProjectName(String name){
-		this.labelProjectName.setText(name);
+		this.projectButton.setText(name);
+		this.projectButton.setVisible(true);
+		projectExitButton.setVisible(true);
 	}
 
 	public void addMainContent(Parent parent){
@@ -79,6 +86,7 @@ public class ViewportController implements Initializable{
 	void closeProject(){
 		anchorMenu.getChildren().clear();
 		initializeProjectSelection();
-		labelProjectName.setText("");
+		projectButton.setVisible(false);
+		projectExitButton.setVisible(false);
 	}
 }

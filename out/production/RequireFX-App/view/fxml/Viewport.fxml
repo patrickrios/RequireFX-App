@@ -4,12 +4,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
@@ -27,7 +30,7 @@
                <children>
                   <ScrollPane fx:id="ScrollMainContent" style="-fx-background-color: #F7F9FB;">
                      <content>
-                        <AnchorPane fx:id="mainContentConteiner" style="-fx-background-color: #F7F9FB;">
+                        <AnchorPane fx:id="mainContentConteiner" prefHeight="560.0" prefWidth="846.0" style="-fx-background-color: #F7F9FB;">
                            <children>
                               <VBox prefHeight="560.0" prefWidth="593.0">
                                  <children>
@@ -57,8 +60,29 @@
       </SplitPane>
       <AnchorPane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #39444A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="labelProjectName" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="10.0" style="-fx-text-fill: #f0f0f0;" text="Project name" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            </Label>
+            <HBox alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <MenuButton fx:id="projectButton" mnemonicParsing="false" styleClass="project-menu-button" text="Project name" textFill="#d7d7d7">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Sobre" />
+                      <MenuItem mnemonicParsing="false" text="Editar informaçoes" />
+                        <MenuItem mnemonicParsing="false" text="Excluir projeto" />
+                    </items>
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding>
+                  </MenuButton>
+                  <Button fx:id="projectExitButton" contentDisplay="RIGHT" graphicTextGap="5.0" mnemonicParsing="false" onAction="#closeProject" prefHeight="30.0" styleClass="project-menu-button" text="Sair">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/project-exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
             <Button mnemonicParsing="false" onAction="#closeApplication" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
