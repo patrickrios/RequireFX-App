@@ -6,17 +6,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import model.entity.Project;
+
 import java.io.IOException;
 
 public class ProjectItemController {
     @FXML
     private Label projectName;
 
-    private int id;
+    private Project project;
 
-    public void initi(String name, int id){
-        this.projectName.setText(name);
-        this.id = id;
+    public void initi(Project project){
+        this.project = project;
+        this.projectName.setText(project.getName());
     }
 
     @FXML
@@ -25,6 +27,7 @@ public class ProjectItemController {
         AnchorPane main = (AnchorPane) scene.lookup("#MainContainer");
         ViewportController c = (ViewportController) main.getUserData();
         c.addMainMenu();
+        c.setCurrentProject(this.project);
         c.setProjectName(projectName.getText());
 
         try {

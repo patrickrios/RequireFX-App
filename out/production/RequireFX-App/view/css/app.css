@@ -11,11 +11,7 @@
 .project-menu-item .label {-fx-text-fill: #eee; -fx-font-size:14; }
 .project-menu-item:focused {-fx-background-color:#35404A;}
 
-
-.context-menu {-fx-background-color: #313A3F; -fx-background-insets: 0, 1, 2;
-    -fx-background-radius: 0;/*0 6 6 6, 0 5 5 5, 0 4 4 4; /*    -fx-padding: 0.666667em 0.083333em 0.666667em 0.083333em;  8 1 8 1 */
-    /*-fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
-}
+.context-menu {-fx-background-color: #313A3F; -fx-background-insets: 0, 1, 2;-fx-background-radius: 0;}
 
 /** SIDE MENU */
 .side-menu-item, .menu-item-selected{-fx-background-radius:0;-fx-padding:12 25;-fx-font-size:14; -fx-cursor:hand;}

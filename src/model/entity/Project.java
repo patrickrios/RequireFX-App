@@ -5,13 +5,13 @@ import model.exception.AlreadyExistsExpcetion;
 import java.security.Timestamp;
 
 public class Project{
-    private int ID;
+    private Integer ID;
     private String name;
     private String description;
     private Timestamp created;
     private Timestamp lastUpdate;
 
-    public Project(String name, String description, int id){
+    public Project(String name, String description, Integer id){
         this.name = name;
         this.description = description;
         this.ID = id;
@@ -30,6 +30,10 @@ public class Project{
         new ProjectDAO().create(this.name, this.description);
     }
 
+    public void updateThis(String name, String description){
+        new ProjectDAO().updateProjectById(this.ID, name, description);
+    }
+
     public String getName() {
         return name;
     }
@@ -38,7 +42,7 @@ public class Project{
         return description;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 }

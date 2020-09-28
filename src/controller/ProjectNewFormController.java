@@ -28,7 +28,7 @@ public class ProjectNewFormController {
     private Project project;
     private boolean isCreating = true;
 
-    public void setProject(Project project){
+    public void editingProject(Project project){
         this.project = project;
         this.inputProjectName.setText(project.getName());
         this.inputDescription.setText(project.getDescription());
@@ -40,7 +40,6 @@ public class ProjectNewFormController {
 
     public void setButtonSubmitText(String text){
         this.buttonSubmit.setText(text);
-        this.buttonSubmit.setDisable(false);
     }
 
     public void isCreating(boolean is){
@@ -57,8 +56,8 @@ public class ProjectNewFormController {
     void createProject() {
         if ( this.isCreating ){
             try {
-                project = new Project(inputProjectName.getText(), inputDescription.getText());
-                project.saveNewProject();
+                Project newProj = new Project(inputProjectName.getText(), inputDescription.getText());
+                newProj.saveNewProject();
                 labelNameException.setText("Projeto salvo");
                 this.inputProjectName.setText("");
                 this.inputDescription.setText("");
@@ -67,8 +66,7 @@ public class ProjectNewFormController {
                 labelNameException.setText("Não salvou");
             }
         }else {
-            //TODO update project
-            System.out.println("Atualizou projeto");
+            this.project.updateThis(inputProjectName.getText(), inputDescription.getText());
         }
     }
 
@@ -77,8 +75,8 @@ public class ProjectNewFormController {
         String input = inputProjectName.getText();
         try {
             verifyLength(input);
-            project = new Project(input, "");
-            project.verifyExistence();
+            Project verify = new Project(input, "");
+            verify.verifyExistence();
             buttonSubmit.setDisable(false);
             labelNameException.setText("");
         }

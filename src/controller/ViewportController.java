@@ -12,6 +12,7 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import model.entity.Project;
 import view.effects.FadeEffectTransition;
 
 public class ViewportController implements Initializable{
@@ -27,6 +28,8 @@ public class ViewportController implements Initializable{
 	private MenuButton projectButton;
 	@FXML
 	private Button projectExitButton;
+
+	private Project project;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -72,6 +75,11 @@ public class ViewportController implements Initializable{
 		projectExitButton.setVisible(true);
 	}
 
+	public void setCurrentProject(Project project){
+		this.project = project;
+		System.out.println("Abriu o projeto: "+project.getName()+" id: "+this.project.getID());
+	}
+
 	public void addMainContent(Parent parent){
 		new FadeEffectTransition(parent);
 		this.mainContentConteiner.getChildren().setAll(parent);
@@ -101,6 +109,7 @@ public class ViewportController implements Initializable{
 			ProjectNewFormController controller = loader.getController();
 			controller.setTitle("Editar projeto");
 			controller.setButtonSubmitText("Salvar informações");
+			controller.editingProject(this.project);
 			controller.isCreating(false);
 			this.stackMainContent.getChildren().add(form);
 		} catch (IOException e) {

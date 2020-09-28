@@ -6,13 +6,16 @@ import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
+        UpdateRow up = new UpdateRow("rfx_project", "project_id", 19);
 
-        ProjectDAO dao = new ProjectDAO();
-        ArrayList<Project> items = dao.loadGroup(0, 15);
+        ArrayList<String> columns = new ArrayList<>();
+        columns.add("name");
+        columns.add("description");
 
-        for (Project p : items){
-            System.out.println(p.getName()+", "+p.getDescription());
-        }
+        ArrayList<Object> values = new ArrayList<>();
+        values.add("Meu projeto");
+        values.add("Descrição qualquer");
 
+        up.updateByID(columns, values);
     }
 }

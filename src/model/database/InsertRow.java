@@ -15,7 +15,6 @@ public class InsertRow extends DAO
     }
 
     public void insert(ArrayList<String> columns, ArrayList<?> values){
-
         try {
             if (columns.size() != values.size()) throw new MissingParameterException(this.insert);
             this.prepareInsertStatement(columns);

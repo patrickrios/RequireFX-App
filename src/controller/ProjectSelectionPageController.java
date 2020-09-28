@@ -30,18 +30,19 @@ public class ProjectSelectionPageController implements Initializable {
         this.list = new List(new ProjectDAO());
         for(Object p : this.list.load()){
             Project project = (Project)p;
-            loadItem(project.getName(), project.getID());
+            loadItem(project);
         }
     }
 
-    private void loadItem(String project, int id){
+    private void loadItem(Project project){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectItemCard.fxml"));
         try {
             Parent item = loader.load();
             ProjectItemController c = loader.getController();
-            c.initi(project, id);
+            c.initi(project);
             this.listView.getChildren().add(item);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }

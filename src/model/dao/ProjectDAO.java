@@ -3,6 +3,7 @@ package model.dao;
 import model.database.FindGroup;
 import model.database.FindRow;
 import model.database.InsertRow;
+import model.database.UpdateRow;
 import model.entity.Project;
 import model.util.Listable;
 
@@ -45,5 +46,12 @@ public class ProjectDAO implements Listable {
     @Override
     public int getTotal() {
         return 0;
+    }
+
+    public boolean updateProjectById(Integer id, Object... values){
+        ArrayList<Object> list = new ArrayList<>(Arrays.asList(values));
+        UpdateRow update = new UpdateRow(this.table, "project_id", id);
+        update.updateByID(this.columns, list);
+        return true;
     }
 }
