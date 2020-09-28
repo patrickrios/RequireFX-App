@@ -19,10 +19,33 @@ public class ProjectNewFormController {
     @FXML
     private Label labelNameException;
     @FXML
+    private Label actionTitle;
+    @FXML
     private TextArea inputDescription;
     @FXML
     private Button buttonSubmit;
+
     private Project project;
+    private boolean isCreating = true;
+
+    public void setProject(Project project){
+        this.project = project;
+        this.inputProjectName.setText(project.getName());
+        this.inputDescription.setText(project.getDescription());
+    }
+
+    public void setTitle(String title){
+        this.actionTitle.setText(title);
+    }
+
+    public void setButtonSubmitText(String text){
+        this.buttonSubmit.setText(text);
+        this.buttonSubmit.setDisable(false);
+    }
+
+    public void isCreating(boolean is){
+        this.isCreating = is;
+    }
 
     @FXML
     void closeForm() {
@@ -32,17 +55,20 @@ public class ProjectNewFormController {
 
     @FXML
     void createProject() {
-        String name = inputProjectName.getText();
-        String desc = inputDescription.getText();
-        try {
-            project = new Project(name, desc);
-            project.saveNewProject();
-            labelNameException.setText("Projeto salvo");
-            this.inputProjectName.setText("");
-            this.inputDescription.setText("");
-        }
-        catch (Exception e) {
-            labelNameException.setText("Não salvou");
+        if ( this.isCreating ){
+            try {
+                project = new Project(inputProjectName.getText(), inputDescription.getText());
+                project.saveNewProject();
+                labelNameException.setText("Projeto salvo");
+                this.inputProjectName.setText("");
+                this.inputDescription.setText("");
+            }
+            catch (Exception e) {
+                labelNameException.setText("Não salvou");
+            }
+        }else {
+            //TODO update project
+            System.out.println("Atualizou projeto");
         }
     }
 

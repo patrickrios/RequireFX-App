@@ -51,7 +51,10 @@ public class ProjectSelectionPageController implements Initializable {
         Button button = (Button)event.getTarget();
         StackPane stack = (StackPane)button.getScene().lookup("#stackMainContent");
         try {
-            Parent form = FXMLLoader.load(getClass().getResource("/view/fxml/ProjectNewForm.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectNewForm.fxml"));
+            Parent form = loader.load();
+            ProjectNewFormController controller = loader.getController();
+            controller.setTitle("Criar novo projeto");
             new FadeEffectTransition(form);
             stack.getChildren().add(form);
         } catch (IOException e) {

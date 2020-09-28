@@ -7,6 +7,11 @@
 .header-window-button-min:hover{-fx-background-color:#45535A;}
 .header-window-button-close:hover{-fx-background-color:#ee6969;}
 .project-menu-button{-fx-background-color:rgba(0,0,0,0.10); -fx-text-fill:#eee; -fx-padding: 2 10;}
+.project-menu-button .label{-fx-text-fill:#eee;-fx-padding:0 5 ;}
+.project-menu-item .label {-fx-text-fill: #eee; -fx-font-size:14; }
+.project-menu-item:focused {-fx-background-color:#35404A;}
+
+.context-menu {-fx-background-color: #313A3F; -fx-background-insets: 0, 1, 2;-fx-background-radius: 0;}
 
 /** SIDE MENU */
 .side-menu-item, .menu-item-selected{-fx-background-radius:0;-fx-padding:12 25;-fx-font-size:14; -fx-cursor:hand;}

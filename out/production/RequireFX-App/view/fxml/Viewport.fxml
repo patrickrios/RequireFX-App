@@ -62,25 +62,14 @@
          <children>
             <HBox alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <MenuButton fx:id="projectButton" mnemonicParsing="false" styleClass="project-menu-button" text="Project name" textFill="#d7d7d7">
+                  <MenuButton fx:id="projectButton" mnemonicParsing="false" popupSide="TOP" styleClass="project-menu-button" text="Project name" textFill="#d7d7d7">
                     <items>
                       <MenuItem mnemonicParsing="false" text="Sobre" />
-                      <MenuItem mnemonicParsing="false" text="Editar informaçoes" />
+                      <MenuItem mnemonicParsing="false" onAction="#loadEditProject" text="Editar informaçoes" />
                         <MenuItem mnemonicParsing="false" text="Excluir projeto" />
                     </items>
-                     <padding>
-                        <Insets bottom="2.0" top="2.0" />
-                     </padding>
                   </MenuButton>
-                  <Button fx:id="projectExitButton" contentDisplay="RIGHT" graphicTextGap="5.0" mnemonicParsing="false" onAction="#closeProject" prefHeight="30.0" styleClass="project-menu-button" text="Sair">
-                     <graphic>
-                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/project-exit.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <Button fx:id="projectExitButton" contentDisplay="RIGHT" graphicTextGap="5.0" mnemonicParsing="false" onAction="#closeProject" styleClass="project-menu-button" text="Sair" />
                </children>
             </HBox>
             <Button mnemonicParsing="false" onAction="#closeApplication" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import view.effects.FadeEffectTransition;
 
@@ -18,6 +19,8 @@ public class ViewportController implements Initializable{
 	private AnchorPane MainContainer;
 	@FXML
     private AnchorPane anchorMenu;
+	@FXML
+	private StackPane stackMainContent;
 	@FXML
 	private AnchorPane mainContentConteiner;
 	@FXML
@@ -88,5 +91,20 @@ public class ViewportController implements Initializable{
 		initializeProjectSelection();
 		projectButton.setVisible(false);
 		projectExitButton.setVisible(false);
+	}
+
+	@FXML
+	void loadEditProject(){
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectNewForm.fxml"));
+			Parent form = loader.load();
+			ProjectNewFormController controller = loader.getController();
+			controller.setTitle("Editar projeto");
+			controller.setButtonSubmitText("Salvar informações");
+			controller.isCreating(false);
+			this.stackMainContent.getChildren().add(form);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
