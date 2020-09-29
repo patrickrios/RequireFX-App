@@ -66,7 +66,7 @@
                     <items>
                       <MenuItem mnemonicParsing="false" text="Sobre" />
                       <MenuItem mnemonicParsing="false" onAction="#loadEditProject" text="Editar informaçoes" />
-                        <MenuItem mnemonicParsing="false" text="Excluir projeto" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteCurrentProject" text="Excluir projeto" />
                     </items>
                   </MenuButton>
                   <Button fx:id="projectExitButton" contentDisplay="RIGHT" graphicTextGap="5.0" mnemonicParsing="false" onAction="#closeProject" styleClass="project-menu-button" text="Sair" />

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="deleteProject" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="transparent-panel" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectDeleteController">
+   <children>
+      <VBox alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="250.0" prefWidth="420.0" style="-fx-background-color: #fff; -fx-border-color: #fd585d; -fx-border-width: 0 0 0 2;">
+               <children>
+                  <Label alignment="CENTER" layoutX="194.0" layoutY="36.0" style="-fx-font-size: 20; -fx-text-fill: #2a3135;" text="Excluir projeto?" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="78.0" />
+                  <Button layoutX="219.0" layoutY="185.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="174.0" style="-fx-background-color: #fd585d; -fx-text-fill: #fff; -fx-background-radius: 30; -fx-font-size: 14;" text="Excluir projeto" AnchorPane.rightAnchor="25.0" />
+                  <Button layoutX="37.0" layoutY="185.0" mnemonicParsing="false" onAction="#close" prefHeight="43.0" prefWidth="174.0" style="-fx-background-color: #eef2f2; -fx-text-fill: #757584; -fx-background-radius: 30; -fx-font-size: 14;" text="Cancelar" AnchorPane.leftAnchor="25.0" />
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/project-delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="132.0" style="-fx-text-fill: #9797a6;" text="Todos os dados serao excluidos permanentemente" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="118.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

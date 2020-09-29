@@ -116,4 +116,17 @@ public class ViewportController implements Initializable{
 			e.printStackTrace();
 		}
 	}
+
+	@FXML
+	void deleteCurrentProject(){
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectDelete.fxml"));
+			Parent delete = loader.load();
+			new FadeEffectTransition(delete);
+			this.stackMainContent.getChildren().add(delete);
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
