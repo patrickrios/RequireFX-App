@@ -87,7 +87,8 @@ public class ViewportController implements Initializable{
     private void initializeProjectSelection(){
 		try {
 			Parent selection =  FXMLLoader.load(getClass().getResource("/view/fxml/ProjectSelectionPage.fxml"));
-			this.mainContentConteiner.getChildren().setAll(selection);
+			new FadeEffectTransition( selection );
+			this.mainContentConteiner.getChildren().setAll( selection );
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -135,5 +136,25 @@ public class ViewportController implements Initializable{
 		this.project.deleteThis();
 		this.stackMainContent.getChildren().remove(deleteLayout);
 		this.closeProject();
+	}
+
+	private FXMLLoader preLoadLayout(String path){
+		return new FXMLLoader(getClass().getResource(path));
+	}
+
+	private void addContent(){
+		//TODO
+	}
+
+	private void addPopup(){
+		//TODO
+	}
+
+	private void removeContent(){
+		//TODO
+	}
+
+	private void removePopup(){
+
 	}
 }
