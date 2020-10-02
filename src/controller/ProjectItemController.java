@@ -21,12 +21,6 @@ public class ProjectItemController extends LayoutController{
 
     @FXML
     void loadProject() {
-        try {
-            super.getLayoutController().openProject(this.project);
-            Parent home = FXMLLoader.load(getClass().getResource("/view/fxml/RequireList.fxml"));
-            super.getLayoutController().setContent(home);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        super.getLayoutController().openProject(this.project);
     }
 }

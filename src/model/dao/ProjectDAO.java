@@ -17,10 +17,10 @@ public class ProjectDAO implements Listable {
         this.columns.add("description");
     }
 
-    public void create(Object...list){
+    public Integer create(Object...list){
         ArrayList<Object> values = new ArrayList<>(Arrays.asList(list));
         InsertRow row = new InsertRow(this.table);
-        row.insert(this.columns, values);
+        return row.insert(this.columns, values);
     }
 
     public boolean findByName(String name){

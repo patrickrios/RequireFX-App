@@ -20,7 +20,7 @@ import java.util.ArrayList;
      protected PreparedStatement defineValues(ArrayList<?> values, String sql){
          PreparedStatement statement = null;
          try {
-             statement = this.getConn().prepareStatement(sql);
+             statement = this.getConn().prepareStatement(sql, statement.RETURN_GENERATED_KEYS);
              int index = 1;
              for (Object obj : values) {
                  String type = obj.getClass().getTypeName();

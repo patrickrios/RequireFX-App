@@ -63,6 +63,8 @@ public class ProjectNewFormController extends LayoutController{
                 labelNameException.setText("Projeto salvo");
                 this.inputProjectName.setText("");
                 this.inputDescription.setText("");
+                super.getLayoutController().removePopup(anchorProjectNewForm);
+                super.getLayoutController().openProject(newProj);
             }
             catch (Exception e) {
                 labelNameException.setText("Não salvou");

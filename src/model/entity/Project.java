@@ -27,7 +27,7 @@ public class Project{
     }
 
     public void saveNewProject() {
-        new ProjectDAO().create(this.name, this.description);
+        this.ID = new ProjectDAO().create(this.name, this.description);
     }
 
     public void updateThis(String name, String description){
