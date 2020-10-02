@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.entity.Project;
@@ -77,7 +78,6 @@ public class ViewportController implements Initializable{
 
 	public void setCurrentProject(Project project){
 		this.project = project;
-		System.out.println("Abriu o projeto: "+project.getName()+" id: "+this.project.getID());
 	}
 
 	public void addMainContent(Parent parent){
@@ -111,6 +111,7 @@ public class ViewportController implements Initializable{
 			controller.setButtonSubmitText("Salvar informações");
 			controller.editingProject(this.project);
 			controller.isCreating(false);
+			new FadeEffectTransition(form);
 			this.stackMainContent.getChildren().add(form);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -128,5 +129,11 @@ public class ViewportController implements Initializable{
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public void deleteProject(HBox deleteLayout){
+		this.project.deleteThis();
+		this.stackMainContent.getChildren().remove(deleteLayout);
+		this.closeProject();
 	}
 }

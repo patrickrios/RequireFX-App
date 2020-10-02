@@ -1,17 +1,14 @@
 package model.dao;
 
-import model.database.FindGroup;
-import model.database.FindRow;
-import model.database.InsertRow;
-import model.database.UpdateRow;
+import model.database.*;
 import model.entity.Project;
 import model.util.Listable;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ProjectDAO implements Listable {
-    String table = "rfx_project";
+    final private String table    = "rfx_project";
+    final private String columnID = "project_id";
     ArrayList<String> columns;
 
     public ProjectDAO(){
@@ -50,8 +47,14 @@ public class ProjectDAO implements Listable {
 
     public boolean updateProjectById(Integer id, Object... values){
         ArrayList<Object> list = new ArrayList<>(Arrays.asList(values));
-        UpdateRow update = new UpdateRow(this.table, "project_id", id);
+        UpdateRow update = new UpdateRow(this.table, this.columnID, id);
         update.updateByID(this.columns, list);
+        return true;
+    }
+
+    public boolean deleteById(Integer id){
+        DeleteRow delete = new DeleteRow(this.table);
+        delete.deleteByID(this.columnID, id);
         return true;
     }
 }

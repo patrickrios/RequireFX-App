@@ -34,6 +34,10 @@ public class Project{
         new ProjectDAO().updateProjectById(this.ID, name, description);
     }
 
+    public void deleteThis(){
+        new ProjectDAO().deleteById(this.ID);
+    }
+
     public String getName() {
         return name;
     }

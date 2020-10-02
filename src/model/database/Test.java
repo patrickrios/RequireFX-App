@@ -6,16 +6,8 @@ import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
-        UpdateRow up = new UpdateRow("rfx_project", "project_id", 19);
+        DeleteRow del = new DeleteRow("rfx_project");
+        del.deleteByID("project_id", 20);
 
-        ArrayList<String> columns = new ArrayList<>();
-        columns.add("name");
-        columns.add("description");
-
-        ArrayList<Object> values = new ArrayList<>();
-        values.add("Meu projeto");
-        values.add("Descrição qualquer");
-
-        up.updateByID(columns, values);
     }
 }
