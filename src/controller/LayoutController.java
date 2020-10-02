@@ -1,8 +1,14 @@
 package controller;
 
-abstract class LayoutController {
+abstract class LayoutController implements Controllable{
     protected ViewportControllable layoutController;
-    public LayoutController(ViewportControllable layoutController){
-        this.layoutController = layoutController;
+
+    @Override
+    public void initialize(ViewportControllable controller) {
+        this.layoutController = controller;
+    }
+
+    public ViewportControllable getLayoutController() {
+        return layoutController;
     }
 }

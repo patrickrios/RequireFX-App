@@ -11,4 +11,5 @@ public interface ViewportControllable {
     void updateProjectName(String name);
     void openProject(Project project);
     void closeProject();
+    void deleteProject();
 }

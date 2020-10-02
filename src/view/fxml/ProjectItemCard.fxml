@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="135.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectItemController">
    <children>
       <Label fx:id="projectName" layoutX="14.0" layoutY="14.0" style="-fx-font-size: 22;" text="Name" />
-      <Button layoutX="14.0" layoutY="95.0" mnemonicParsing="false" onAction="#openProject" styleClass="project-open" text="Abrir">
+      <Button layoutX="14.0" layoutY="95.0" mnemonicParsing="false" onAction="#loadProject" styleClass="project-open" text="Abrir">
          <graphic>
             <ImageView fitHeight="11.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                <image>

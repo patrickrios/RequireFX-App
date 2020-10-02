@@ -6,12 +6,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import model.entity.Project;
 import model.exception.AlreadyExistsExpcetion;
 import model.exception.InputToShortException;
 
-public class ProjectNewFormController {
+public class ProjectNewFormController extends LayoutController{
     @FXML
     private HBox anchorProjectNewForm;
     @FXML
@@ -27,6 +26,8 @@ public class ProjectNewFormController {
 
     private Project project;
     private boolean isCreating = true;
+
+
 
     public void editingProject(Project project){
         this.project = project;
@@ -48,15 +49,16 @@ public class ProjectNewFormController {
 
     @FXML
     void closeForm() {
-        StackPane form = (StackPane)anchorProjectNewForm.getParent();
-        form.getChildren().remove(anchorProjectNewForm);
+        super.getLayoutController().removePopup(anchorProjectNewForm);
     }
 
     @FXML
     void createProject() {
+        String projectName = inputProjectName.getText();
+        String projectDesc = inputDescription.getText();
         if ( this.isCreating ){
             try {
-                Project newProj = new Project(inputProjectName.getText(), inputDescription.getText());
+                Project newProj = new Project(projectName, projectDesc);
                 newProj.saveNewProject();
                 labelNameException.setText("Projeto salvo");
                 this.inputProjectName.setText("");
@@ -67,6 +69,7 @@ public class ProjectNewFormController {
             }
         }else {
             this.project.updateThis(inputProjectName.getText(), inputDescription.getText());
+            super.getLayoutController().updateProjectName(projectName);
         }
     }
 

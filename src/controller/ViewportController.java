@@ -10,13 +10,12 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.entity.Project;
 import view.effects.FadeEffectTransition;
 
-public class ViewportController implements Initializable{
+public class ViewportController implements Initializable, ViewportControllable{
 	@FXML
 	private AnchorPane MainContainer;
 	@FXML
@@ -57,7 +56,7 @@ public class ViewportController implements Initializable{
     	stage.setY(0.0);
     }
     
-    public void addMainMenu() {
+    private void addMainMenu() {
     	FXMLLoader load = new FXMLLoader(getClass().getResource("/view/fxml/MainMenu.fxml"));
 		try {
 			Parent menu = load.load();
@@ -70,32 +69,69 @@ public class ViewportController implements Initializable{
 		}
     }
 
-    public void setProjectName(String name){
+    private void setProjectName(String name){
 		this.projectButton.setText(name);
 		this.projectButton.setVisible(true);
 		projectExitButton.setVisible(true);
 	}
 
-	public void setCurrentProject(Project project){
+	private void setCurrentProject(Project project){
 		this.project = project;
 	}
 
-	public void addMainContent(Parent parent){
-		new FadeEffectTransition(parent);
-		this.mainContentConteiner.getChildren().setAll(parent);
-	}
     private void initializeProjectSelection(){
 		try {
-			Parent selection =  FXMLLoader.load(getClass().getResource("/view/fxml/ProjectSelectionPage.fxml"));
-			new FadeEffectTransition( selection );
-			this.mainContentConteiner.getChildren().setAll( selection );
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectSelectionPage.fxml"));
+			Parent selection =  loader.load();
+			ProjectSelectionPageController controller = loader.getController();
+			controller.initialize(this);
+			setContent(selection);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
+	@Override
+	public void setContent(Parent child) {
+		new FadeEffectTransition(child);
+		this.mainContentConteiner.getChildren().setAll(child);
+	}
+
+	@Override
+	public void removeContent(Parent content) {
+		this.mainContentConteiner.getChildren().remove(content);
+	}
+
+	@Override
+	public void addPopup(Parent popup) {
+		new FadeEffectTransition(popup);
+		this.stackMainContent.getChildren().add(popup);
+	}
+
+	@Override
+	public void removePopup(Parent popup) {
+		this.stackMainContent.getChildren().remove(popup);
+	}
+
+	@Override
+	public void updateProjectName(String name) {
+		this.projectButton.setText(name);
+	}
+
+	@Override
+	public void openProject(Project project) {
+		this.addMainMenu();
+		this.setCurrentProject(project);
+		this.setProjectName(project.getName());
+	}
+
+	@Override
+	public void closeProject() {
+		exitProject();
+	}
+
 	@FXML
-	void closeProject(){
+	void exitProject(){
 		anchorMenu.getChildren().clear();
 		initializeProjectSelection();
 		projectButton.setVisible(false);
@@ -108,12 +144,12 @@ public class ViewportController implements Initializable{
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectNewForm.fxml"));
 			Parent form = loader.load();
 			ProjectNewFormController controller = loader.getController();
+			controller.initialize(this);
 			controller.setTitle("Editar projeto");
 			controller.setButtonSubmitText("Salvar informações");
 			controller.editingProject(this.project);
 			controller.isCreating(false);
-			new FadeEffectTransition(form);
-			this.stackMainContent.getChildren().add(form);
+			addPopup(form);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -124,37 +160,18 @@ public class ViewportController implements Initializable{
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectDelete.fxml"));
 			Parent delete = loader.load();
-			new FadeEffectTransition(delete);
-			this.stackMainContent.getChildren().add(delete);
+			ProjectDeleteController controller = loader.getController();
+			controller.initialize(this);
+			addPopup(delete);
 		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void deleteProject(HBox deleteLayout){
+	@Override
+	public void deleteProject(){
 		this.project.deleteThis();
-		this.stackMainContent.getChildren().remove(deleteLayout);
 		this.closeProject();
-	}
-
-	private FXMLLoader preLoadLayout(String path){
-		return new FXMLLoader(getClass().getResource(path));
-	}
-
-	private void addContent(){
-		//TODO
-	}
-
-	private void addPopup(){
-		//TODO
-	}
-
-	private void removeContent(){
-		//TODO
-	}
-
-	private void removePopup(){
-
 	}
 }

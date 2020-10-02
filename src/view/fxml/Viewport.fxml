@@ -69,7 +69,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#deleteCurrentProject" text="Excluir projeto" />
                     </items>
                   </MenuButton>
-                  <Button fx:id="projectExitButton" contentDisplay="RIGHT" graphicTextGap="5.0" mnemonicParsing="false" onAction="#closeProject" styleClass="project-menu-button" text="Sair" />
+                  <Button fx:id="projectExitButton" contentDisplay="RIGHT" graphicTextGap="5.0" mnemonicParsing="false" onAction="#exitProject" styleClass="project-menu-button" text="Sair" />
                </children>
             </HBox>
             <Button mnemonicParsing="false" onAction="#closeApplication" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
