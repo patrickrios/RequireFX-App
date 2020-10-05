@@ -46,10 +46,10 @@ public class Require implements Persistent{
 
     @Override
     public int saveThis() {
-        Integer inserted = 0;
-        if (this.ID == null)
-            new RequireDAO().create(this.name, this.projectID);
-        else{
+        int inserted = 0;
+        if (this.ID == null) {
+            this.ID = new RequireDAO().create(this.name, this.projectID, this.type);
+        }else{
             //TODO update require
             inserted = 0;
         }
@@ -64,5 +64,9 @@ public class Require implements Persistent{
     @Override
     public void deleteThis() {
 
+    }
+
+    public Integer getID() {
+        return ID;
     }
 }

@@ -6,8 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import model.entity.Project;
-
-import java.beans.PropertyEditor;
 import java.io.IOException;
 
 public class RequireListController {

@@ -48,9 +48,10 @@ public class RequireCreateNewController implements Initializable {
     void createRequire() {
         Integer projectID  = this.controller.getProject().getID();
         String requireName = this.inputName.getText();
-        Require req = new Require(requireName, projectID, 1);
+        int type           = this.getRequireTypeValue();
+        Require req = new Require(requireName, projectID, type);
         req.saveThis();
-        //System.out.println("Salvou o requisito: "+requireName);
+        System.out.println("requisito: "+requireName+" tipo: "+req.getTypeName()+", id: "+req.getID());
         this.inputName.setText("");
         //TODO add item to list
     }
@@ -100,6 +101,16 @@ public class RequireCreateNewController implements Initializable {
     private void switchSelectButtonIcon(Button clicked){
         clicked.setGraphic( new ImageView( new Image("/view/images/require-add-check.png")));
         this.selected.setGraphic(new ImageView(new Image("/view/images/require-add-uncheck.png")));
+    }
+
+    private int getRequireTypeValue(){
+        String type = this.selected.getText();
+        int value = 1;
+        if(type.equals("RNF"))
+            value = 2;
+        else  if (type.equals("RN"))
+            value = 3;
+        return value;
     }
 
     public void setInputFocus() {
