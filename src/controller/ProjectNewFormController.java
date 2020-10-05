@@ -25,9 +25,8 @@ public class ProjectNewFormController extends LayoutController{
     private Button buttonSubmit;
 
     private Project project;
+
     private boolean isCreating = true;
-
-
 
     public void editingProject(Project project){
         this.project = project;

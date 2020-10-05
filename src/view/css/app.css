@@ -47,6 +47,10 @@
     .project-open{-fx-background-color:#ECF1FF; -fx-text-fill:#5A88C5;}
     .project-option{-fx-background-color:#f7f9fe;-fx-background-radius:30; -fx-border-radius:30;}
 
+    /** REQUIRES */
+    .require-type-selected{-fx-text-fill:#1eaddd;}
+    .require-type-unselected{-fx-text-fill:#9797a6;}
+
 	/** FORM*/
 	    /** Inputs */
 	    .field-label{-fx-font-size:16; -fx-text-fill:#39444A; -fx-padding:3 0;}

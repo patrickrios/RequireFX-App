@@ -52,8 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -86,7 +86,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view/fxml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view/images" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -100,8 +100,8 @@
       <recent name="$PROJECT_DIR$/src/view/images/project" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/view/fxml" />
       <recent name="$PROJECT_DIR$/src/view/images" />
+      <recent name="$PROJECT_DIR$/src/view/fxml" />
       <recent name="$PROJECT_DIR$/src/view/images/project" />
     </key>
   </component>
@@ -238,10 +238,10 @@
       <screen x="0" y="0" width="1366" height="729" />
     </state>
     <state x="416" y="155" width="513" height="413" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.729@0.0.1366.729" timestamp="1601345148840" />
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1601622416174">
+    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1601865877642">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.729@0.0.1366.729" timestamp="1601622416174" />
+    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.729@0.0.1366.729" timestamp="1601865877642" />
     <state x="415" y="157" width="525" height="413" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601601357659">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
@@ -258,22 +258,22 @@
       <screen x="0" y="0" width="1366" height="729" />
     </state>
     <state x="461" y="122" width="610" height="482" key="FileChooserDialogImpl/0.0.1366.729@0.0.1366.729" timestamp="1600475406058" />
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom" timestamp="1601623860519">
+    <state width="1343" height="77" key="GridCell.Tab.0.bottom" timestamp="1601875190356">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom/0.0.1366.729@0.0.1366.729" timestamp="1601623860519" />
-    <state width="1343" height="172" key="GridCell.Tab.0.center" timestamp="1601623860518">
+    <state width="1343" height="77" key="GridCell.Tab.0.bottom/0.0.1366.729@0.0.1366.729" timestamp="1601875190356" />
+    <state width="1343" height="77" key="GridCell.Tab.0.center" timestamp="1601875190355">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.center/0.0.1366.729@0.0.1366.729" timestamp="1601623860518" />
-    <state width="1343" height="172" key="GridCell.Tab.0.left" timestamp="1601623860518">
+    <state width="1343" height="77" key="GridCell.Tab.0.center/0.0.1366.729@0.0.1366.729" timestamp="1601875190355" />
+    <state width="1343" height="77" key="GridCell.Tab.0.left" timestamp="1601875190355">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.left/0.0.1366.729@0.0.1366.729" timestamp="1601623860518" />
-    <state width="1343" height="172" key="GridCell.Tab.0.right" timestamp="1601623860519">
+    <state width="1343" height="77" key="GridCell.Tab.0.left/0.0.1366.729@0.0.1366.729" timestamp="1601875190355" />
+    <state width="1343" height="77" key="GridCell.Tab.0.right" timestamp="1601875190355">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.right/0.0.1366.729@0.0.1366.729" timestamp="1601623860519" />
+    <state width="1343" height="77" key="GridCell.Tab.0.right/0.0.1366.729@0.0.1366.729" timestamp="1601875190355" />
     <state width="1343" height="126" key="GridCell.Tab.1.bottom" timestamp="1601607025795">
       <screen x="0" y="0" width="1366" height="729" />
     </state>

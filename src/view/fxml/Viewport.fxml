@@ -19,9 +19,9 @@
 
 <AnchorPane fx:id="MainContainer" prefHeight="650.0" prefWidth="1366.0" style="-fx-background-color: #FFF; -fx-border-color: #343434;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewportController">
    <!-- store controller as userData property -->
-   <userData>
+   <!--userData>
       <fx:reference source="controller" />
-   </userData>
+   </userData-->
    <children>
       <SplitPane dividerPositions="0.17302052785923755" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="29.0">
         <items>

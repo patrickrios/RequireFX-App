@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RequireListController">
    <children>
-      <HBox layoutX="35.0" layoutY="35.0" spacing="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="35.0">
+      <Label layoutX="35.0" layoutY="26.0" styleClass="page-title" text="Requisitos" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="35.0" />
+      <VBox alignment="TOP_CENTER" layoutX="35.0" layoutY="79.0" spacing="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="72.0">
          <children>
-            <Label styleClass="page-title" text="Requisitos">
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Label>
-            <Button mnemonicParsing="false" text="RF" />
-            <Button mnemonicParsing="false" text="RNF" />
-            <Button mnemonicParsing="false" text="RN" />
-         </children>
-      </HBox>
-      <VBox alignment="TOP_CENTER" layoutX="35.0" layoutY="79.0" spacing="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="77.0">
-         <children>
+            <Pane fx:id="newRequireContainer">
+               <children>
+                  <Button fx:id="addInputButton" mnemonicParsing="false" onAction="#loadNewRequireInput" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: #54a2ed; -fx-text-fill: #f3f6f9; -fx-font-size: 13; -fx-background-radius: 30;" text="Adicionar">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/require-add-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
             <AnchorPane prefHeight="38.0" prefWidth="775.0" style="-fx-background-color: #fff;" styleClass="input-shadow">
                <children>
                   <Label layoutX="14.0" layoutY="11.0" text="RF" />
@@ -55,15 +56,6 @@
                   </Button>
                </children>
             </AnchorPane>
-            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="771.0" style="-fx-background-color: #f1f3f5; -fx-text-fill: #666; -fx-font-size: 14;" text="Adicionar">
-               <graphic>
-                  <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/require-add.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
          </children>
       </VBox>
    </children>

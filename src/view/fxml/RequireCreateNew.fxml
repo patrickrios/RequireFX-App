@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="RequireInput" prefHeight="125.0" prefWidth="765.0" style="-fx-background-color: #fff; -fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #00a3d9;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RequireCreateNewController">
+   <children>
+      <TextField fx:id="inputName" onKeyReleased="#validateInput" prefWidth="600.0" promptText="Insira um nome" style="-fx-background-color: transparent; -fx-font-size: 16;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+      <Button fx:id="createButton" layoutX="11.0" layoutY="94.0" mnemonicParsing="false" onAction="#createRequire" style="-fx-background-color: #80d557; -fx-text-fill: #f3f6f9;" text="Adicionar" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+      <Button layoutX="99.0" layoutY="97.0" mnemonicParsing="false" onAction="#closeInput" style="-fx-background-color: #ececfb; -fx-text-fill: #868695;" text="Cancelar" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="buttonRF" graphicTextGap="2.0" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#setRequireType" text="RF" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/require-add-check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="button-reset" />
+            <String fx:value="require-type-selected" />
+         </styleClass>
+      </Button>
+      <Button graphicTextGap="2.0" layoutX="58.0" layoutY="11.0" mnemonicParsing="false" onAction="#setRequireType" text="RNF" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="10.0">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/require-add-uncheck.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="button-reset" />
+            <String fx:value="require-type-unselected" />
+         </styleClass>
+      </Button>
+      <Button graphicTextGap="2.0" layoutX="101.0" layoutY="11.0" mnemonicParsing="false" onAction="#setRequireType" text="RN" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="10.0">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/require-add-uncheck.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="button-reset" />
+            <String fx:value="require-type-unselected" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>
