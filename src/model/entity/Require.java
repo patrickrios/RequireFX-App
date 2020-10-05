@@ -1,9 +1,12 @@
 package model.entity;
 
+import model.dao.RequireDAO;
+
 import java.sql.Timestamp;
 
 public class Require implements Persistent{
     private Integer ID;
+    private Integer projectID;
     private String name;
     private boolean done;
     private Timestamp createDate;
@@ -23,6 +26,12 @@ public class Require implements Persistent{
         this.type = type;
     }
 
+    public Require(String name, Integer projectID, int type){
+        this.name = name;
+        this.projectID = projectID;
+        this.type = type;
+    }
+
 
     public String getTypeName(){
         String typeName = "";
@@ -37,7 +46,14 @@ public class Require implements Persistent{
 
     @Override
     public int saveThis() {
-        return 0;
+        Integer inserted = 0;
+        if (this.ID == null)
+            new RequireDAO().create(this.name, this.projectID);
+        else{
+            //TODO update require
+            inserted = 0;
+        }
+        return inserted;
     }
 
     @Override

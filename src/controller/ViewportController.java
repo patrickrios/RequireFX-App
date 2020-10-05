@@ -125,7 +125,10 @@ public class ViewportController implements Initializable, ViewportControllable{
 		this.setProjectName(project.getName());
 
 		try {
-			Parent home  = FXMLLoader.load(getClass().getResource("/view/fxml/RequireList.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/RequireList.fxml"));
+			Parent home  = loader.load();
+			RequireListController controller = loader.getController();
+			controller.initialize(this.project);
 			setContent(home);
 		} catch (IOException e) {
 			e.printStackTrace();

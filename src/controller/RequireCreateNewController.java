@@ -9,6 +9,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import model.entity.Require;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -44,8 +46,13 @@ public class RequireCreateNewController implements Initializable {
 
     @FXML
     void createRequire() {
-        //TODO
-        System.out.println(inputName.getText()+" type:"+selected.getText());
+        Integer projectID  = this.controller.getProject().getID();
+        String requireName = this.inputName.getText();
+        Require req = new Require(requireName, projectID, 1);
+        req.saveThis();
+        //System.out.println("Salvou o requisito: "+requireName);
+        this.inputName.setText("");
+        //TODO add item to list
     }
 
     @FXML

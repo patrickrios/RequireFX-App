@@ -5,6 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import model.entity.Project;
+
+import java.beans.PropertyEditor;
 import java.io.IOException;
 
 public class RequireListController {
@@ -12,6 +15,12 @@ public class RequireListController {
     private Pane newRequireContainer;
     @FXML
     private Button addInputButton;
+
+    private Project project;
+
+    public void initialize(Project project){
+        this.project= project;
+    }
 
     @FXML
     void loadNewRequireInput() {
@@ -32,4 +41,7 @@ public class RequireListController {
         this.newRequireContainer.getChildren().add(this.addInputButton);
     }
 
+    public Project getProject() {
+        return project;
+    }
 }
