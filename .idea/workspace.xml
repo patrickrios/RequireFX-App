@@ -52,8 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -238,10 +238,10 @@
       <screen x="0" y="0" width="1366" height="729" />
     </state>
     <state x="416" y="155" width="513" height="413" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.729@0.0.1366.729" timestamp="1601345148840" />
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1601865877642">
+    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1601878157679">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.729@0.0.1366.729" timestamp="1601865877642" />
+    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.729@0.0.1366.729" timestamp="1601878157679" />
     <state x="415" y="157" width="525" height="413" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601601357659">
       <screen x="0" y="0" width="1366" height="729" />
     </state>
