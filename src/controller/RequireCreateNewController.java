@@ -2,7 +2,9 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -11,6 +13,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import model.entity.Require;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -49,11 +52,10 @@ public class RequireCreateNewController implements Initializable {
         Integer projectID  = this.controller.getProject().getID();
         String requireName = this.inputName.getText();
         int type           = this.getRequireTypeValue();
-        Require req = new Require(requireName, projectID, type);
-        req.saveThis();
-        System.out.println("requisito: "+requireName+" tipo: "+req.getTypeName()+", id: "+req.getID());
-        this.inputName.setText("");
-        //TODO add item to list
+        Require require = new Require(requireName, projectID, type);
+        require.saveThis();
+        addRequireToList(require);
+        this.controller.removeRequireInput(RequireInput);
     }
 
     @FXML
@@ -111,6 +113,18 @@ public class RequireCreateNewController implements Initializable {
         else  if (type.equals("RN"))
             value = 3;
         return value;
+    }
+
+    private void addRequireToList(Require require){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/RequireListItem.fxml"));
+            Parent item = loader.load();
+            RequireListItemController controller = loader.getController();
+            controller.setRequire(require);
+            this.controller.addItemToList(item);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setInputFocus() {

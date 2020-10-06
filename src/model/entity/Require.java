@@ -69,4 +69,8 @@ public class Require implements Persistent{
     public Integer getID() {
         return ID;
     }
+
+    public String getName() {
+        return name;
+    }
 }

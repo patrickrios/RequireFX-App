@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RequireListController">
    <children>
       <Label layoutX="35.0" layoutY="26.0" styleClass="page-title" text="Requisitos" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="35.0" />
-      <VBox alignment="TOP_CENTER" layoutX="35.0" layoutY="79.0" spacing="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="72.0">
+      <VBox fx:id="vboxList" alignment="TOP_CENTER" layoutX="35.0" layoutY="79.0" spacing="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="72.0">
          <children>
             <Pane fx:id="newRequireContainer">
                <children>
@@ -26,36 +26,6 @@
                   </Button>
                </children>
             </Pane>
-            <AnchorPane prefHeight="38.0" prefWidth="775.0" style="-fx-background-color: #fff;" styleClass="input-shadow">
-               <children>
-                  <Label layoutX="14.0" layoutY="11.0" text="RF" />
-                  <ImageView fitHeight="13.0" fitWidth="8.0" layoutX="37.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/item-icon.png" />
-                     </image>
-                  </ImageView>
-                  <Button layoutX="68.0" layoutY="10.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="18.0" style="-fx-border-color: #ddd; -fx-background-radius: 20; -fx-border-radius: 20;" styleClass="button-reset" />
-                  <Label layoutX="95.0" layoutY="9.0" styleClass="paragraph" text="Criar novo projeto" />
-                  <Button layoutX="750.0" layoutY="11.0" mnemonicParsing="false" styleClass="button-reset" AnchorPane.rightAnchor="20.0">
-                     <graphic>
-                        <ImageView fitHeight="14.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/require-delete.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="722.0" layoutY="11.0" mnemonicParsing="false" styleClass="button-reset" AnchorPane.rightAnchor="42.0">
-                     <graphic>
-                        <ImageView fitHeight="14.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/require-agend.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
          </children>
       </VBox>
    </children>

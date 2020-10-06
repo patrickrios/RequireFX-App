@@ -5,10 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import model.entity.Project;
 import java.io.IOException;
 
 public class RequireListController {
+    @FXML
+    private VBox vboxList;
     @FXML
     private Pane newRequireContainer;
     @FXML
@@ -18,6 +21,7 @@ public class RequireListController {
 
     public void initialize(Project project){
         this.project= project;
+        //TODO load list
     }
 
     @FXML
@@ -41,5 +45,9 @@ public class RequireListController {
 
     public Project getProject() {
         return project;
+    }
+
+    public void addItemToList(Parent item){
+        this.vboxList.getChildren().add(item);
     }
 }
