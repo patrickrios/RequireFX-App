@@ -32,7 +32,6 @@ public class Require implements Persistent{
         this.type = type;
     }
 
-
     public String getTypeName(){
         String typeName = "";
         if (this.type == 1)
@@ -48,7 +47,7 @@ public class Require implements Persistent{
     public int saveThis() {
         int inserted = 0;
         if (this.ID == null) {
-            this.ID = new RequireDAO().create(this.name, this.projectID, this.type);
+            this.ID = new RequireDAO(this.projectID).create(this.name, this.type);
         }else{
             //TODO update require
             inserted = 0;

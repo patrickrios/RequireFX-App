@@ -28,8 +28,8 @@ public class ProjectSelectionPageController extends LayoutController{
     }
 
     private void loadItem(Project project){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectItemCard.fxml"));
         try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/ProjectItemCard.fxml"));
             Parent item = loader.load();
             ProjectItemController controller = loader.getController();
             controller.initialize(super.getLayoutController());
