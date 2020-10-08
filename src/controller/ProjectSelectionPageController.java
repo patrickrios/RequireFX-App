@@ -8,6 +8,7 @@ import model.dao.ProjectDAO;
 import model.entity.Project;
 import model.util.List;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ProjectSelectionPageController extends LayoutController{
     @FXML
@@ -16,14 +17,25 @@ public class ProjectSelectionPageController extends LayoutController{
     @Override
     public void initialize(ViewportControllable controller) {
         super.layoutController = controller;
-        loadFirstPage();
+        try {
+            loadFirstPage();
+        } catch (Exception e) {
+            loadWelcomeLayout();
+        }
     }
 
-    private void loadFirstPage(){
+    private void loadFirstPage() throws Exception {
         List list = new List(new ProjectDAO());
-        for(Object p : list.load()){
-            Project project = (Project)p;
-            this.loadItem(project);
+
+        ArrayList<?> items = list.load();
+
+        if (items.isEmpty()) {
+            throw new Exception();
+        }else {
+            for (Object p : items) {
+                Project project = (Project) p;
+                this.loadItem(project);
+            }
         }
     }
 
@@ -50,8 +62,19 @@ public class ProjectSelectionPageController extends LayoutController{
             controller.initialize(super.getLayoutController());
             controller.setTitle("Criar novo projeto");
             super.getLayoutController().addPopup(form);
+            controller.setInputFocus();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    private void loadWelcomeLayout(){
+        try {
+            Parent welcome = FXMLLoader.load(getClass().getResource("/view/fxml/ProjectListWelcome.fxml"));
+            this.listView.getChildren().setAll(welcome);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -46,6 +46,10 @@ public class ProjectNewFormController extends LayoutController{
         this.isCreating = is;
     }
 
+    public void setInputFocus(){
+        this.inputProjectName.requestFocus();
+    }
+
     @FXML
     void closeForm() {
         super.getLayoutController().removePopup(anchorProjectNewForm);
