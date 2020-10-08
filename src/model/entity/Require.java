@@ -43,6 +43,10 @@ public class Require implements Persistent{
         return typeName;
     }
 
+    public int getType() {
+        return type;
+    }
+
     @Override
     public int saveThis() {
         int inserted = 0;

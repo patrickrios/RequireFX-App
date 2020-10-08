@@ -61,10 +61,14 @@ public class RequireCreateNewController implements Initializable {
     @FXML
     void validateInput(KeyEvent event) {
         String key = event.getCode().toString();
-        if (this.inputName.getText().length() == 1)
-            if(key.equals("SPACE"))
+        if(key.equals("ESCAPE")) {
+            this.controller.removeRequireInput(RequireInput);
+        }
+        if (this.inputName.getText().length() == 1) {
+            if (key.equals("SPACE")){
                 this.inputName.setText("");
-
+            }
+        }
         if(this.inputName.getText().isEmpty()) {
             this.createButton.setDisable(true);
         }else {

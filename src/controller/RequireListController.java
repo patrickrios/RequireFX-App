@@ -53,7 +53,6 @@ public class RequireListController {
 
     public void removeRequireInput(Parent input){
         this.newRequireContainer.getChildren().remove(input);
-        this.newRequireContainer.getChildren().add(this.addInputButton);
     }
 
     public Project getProject() {

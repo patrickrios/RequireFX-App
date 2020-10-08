@@ -50,6 +50,15 @@
     /** REQUIRES */
     .require-type-selected{-fx-text-fill:#1eaddd;}
     .require-type-unselected{-fx-text-fill:#9797a6;}
+    .require-item{-fx-background-color:#fff;-fx-border-color:#fff;-fx-border-width:1 0;}
+    .require-item:hover{-fx-background-color:#fcfdfe;-fx-border-color:#eff4f8;-fx-cursor:hand;}
+    .require-item:hover .require-item-option-hbox{visibility:visible;}
+    .require-item-option-hbox{visibility:hidden;}
+    .require-item-option{-fx-background-color:#e8eff4;-fx-background-radius:30; -fx-padding:5 7;}
+    .rf-label{-fx-background-color:#7ecc49;} .rnf-label{-fx-background-color:#b8255f} .rn-label{-fx-background-color:#14aaf5;}
+    .require-item-check{-fx-background-color:#fff;-fx-border-color:#ddd; -fx-background-radius:20; -fx-border-radius:20;}
+    .require-item-check:hover .require-item-icon{visibility:visible;}
+    .require-item-icon{visibility:hidden;}
 
 	/** FORM*/
 	    /** Inputs */
