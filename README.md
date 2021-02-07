@@ -1,15 +1,16 @@
-## Sample Desktop Application JavaFX
-Um modelo básico de layout para um projeto desktop. Eu decidi criar este modelo por que toda vez que eu iniciava um novo projeto eu precisava criar algo parecido, portanto, uso este modelo para poupar me deste trabalho. É útil para mim e pode ser útil para você, sinta-se a vontade para usar este projeto da forma que quiser.
+<img src="/screenshots/requirefx-logo.png">
+
+Uma proposta de projeto para uma ferramenta de engenharia de software, para gerenciar requisitos de software.
 ### Requisitos:
 * JDK 11
 * Openjfx 11
-### Características
-Uma janela básica contento:
-* Cabeçalho com logo, nome do projeto e controles da janela
-* Menu lateral
-* Formulário básico
-* Página básica
+### Funcionalidades
+Básico:
+* Criar novo projeto
+* Adicionar novo requisito
+* Excluir requisito
+* Editar requisito
 ### Screenshots
-![](screenshots/Screenshot-from-2020-09-16-16-16-52.png)
+<img src="/screenshots/screenshot-add-requirement.png">
+<img src="/screenshots/screenshot-create-new-project.png">
 
-![](screenshots/Screenshot-from-2020-09-16-16-17-18.png)

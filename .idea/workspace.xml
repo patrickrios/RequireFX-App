@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,8 +65,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1hdvLDOV2scQlTfNplmfIvh7wo3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -86,23 +92,24 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view/images" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/screenshots" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/view/fxml" />
-      <recent name="$PROJECT_DIR$/src/view/fxml/project" />
-      <recent name="$PROJECT_DIR$/src/view/images/project" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/screenshots" />
       <recent name="$PROJECT_DIR$/src/view/images" />
       <recent name="$PROJECT_DIR$/database" />
       <recent name="$PROJECT_DIR$/src/view/fxml" />
+      <recent name="$PROJECT_DIR$/src/view/images/project" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/view/fxml" />
+      <recent name="$PROJECT_DIR$/src/view/fxml/project" />
       <recent name="$PROJECT_DIR$/src/view/images/project" />
     </key>
   </component>
@@ -229,92 +236,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="141" y="0" width="1084" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601601360423">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="141" y="0" width="1084" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.729@0.0.1366.729" timestamp="1601601360423" />
-    <state x="416" y="155" width="513" height="413" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601345148840">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="416" y="155" width="513" height="413" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.729@0.0.1366.729" timestamp="1601345148840" />
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1601964849892">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="491" y="70" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.0.1366.729@0.0.1366.729" timestamp="1601964849892" />
-    <state x="415" y="157" width="525" height="413" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601601357659">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="415" y="157" width="525" height="413" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.729@0.0.1366.729" timestamp="1601601357659" />
-    <state x="411" y="121" width="524" height="482" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1600354005187">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="411" y="121" width="524" height="482" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.729@0.0.1366.729" timestamp="1600354005187" />
-    <state x="467" y="208" width="411" height="309" key="DetectedRootsChooserDialog" timestamp="1600475419107">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="467" y="208" width="411" height="309" key="DetectedRootsChooserDialog/0.0.1366.729@0.0.1366.729" timestamp="1600475419107" />
-    <state x="461" y="122" width="610" height="482" key="FileChooserDialogImpl" timestamp="1600475406058">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="461" y="122" width="610" height="482" key="FileChooserDialogImpl/0.0.1366.729@0.0.1366.729" timestamp="1600475406058" />
-    <state width="1343" height="174" key="GridCell.Tab.0.bottom" timestamp="1602188013392">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.bottom/0.0.1366.729@0.0.1366.729" timestamp="1602188013392" />
-    <state width="1343" height="174" key="GridCell.Tab.0.center" timestamp="1602188013392">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.center/0.0.1366.729@0.0.1366.729" timestamp="1602188013392" />
-    <state width="1343" height="174" key="GridCell.Tab.0.left" timestamp="1602188013391">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.left/0.0.1366.729@0.0.1366.729" timestamp="1602188013391" />
-    <state width="1343" height="174" key="GridCell.Tab.0.right" timestamp="1602188013392">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.right/0.0.1366.729@0.0.1366.729" timestamp="1602188013392" />
-    <state width="1343" height="126" key="GridCell.Tab.1.bottom" timestamp="1601607025795">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="126" key="GridCell.Tab.1.bottom/0.0.1366.729@0.0.1366.729" timestamp="1601607025795" />
-    <state width="1343" height="126" key="GridCell.Tab.1.center" timestamp="1601607025794">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="126" key="GridCell.Tab.1.center/0.0.1366.729@0.0.1366.729" timestamp="1601607025794" />
-    <state width="1343" height="126" key="GridCell.Tab.1.left" timestamp="1601607025794">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="126" key="GridCell.Tab.1.left/0.0.1366.729@0.0.1366.729" timestamp="1601607025794" />
-    <state width="1343" height="126" key="GridCell.Tab.1.right" timestamp="1601607025795">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="1343" height="126" key="GridCell.Tab.1.right/0.0.1366.729@0.0.1366.729" timestamp="1601607025795" />
-    <state x="166" y="0" width="1024" height="728" key="SettingsEditor" timestamp="1600602167845">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="166" y="0" width="1024" height="728" key="SettingsEditor/0.0.1366.729@0.0.1366.729" timestamp="1600602167845" />
-    <state x="381" y="254" width="583" height="217" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600475319196">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="381" y="254" width="583" height="217" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.729@0.0.1366.729" timestamp="1600475319196" />
-    <state x="416" y="60" width="524" height="605" key="extract.method.dialog" timestamp="1601303215358">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="416" y="60" width="524" height="605" key="extract.method.dialog/0.0.1366.729@0.0.1366.729" timestamp="1601303215358" />
-    <state x="0" y="0" width="585" height="729" key="find.popup" timestamp="1600498303279">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="0" y="0" width="585" height="729" key="find.popup/0.0.1366.729@0.0.1366.729" timestamp="1600498303279" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1600356044033">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state width="600" height="440" key="javadoc.popup/0.0.1366.729@0.0.1366.729" timestamp="1600356044033" />
-    <state x="346" y="50" width="672" height="678" key="search.everywhere.popup" timestamp="1600476446008">
-      <screen x="0" y="0" width="1366" height="729" />
-    </state>
-    <state x="346" y="50" width="672" height="678" key="search.everywhere.popup/0.0.1366.729@0.0.1366.729" timestamp="1600476446008" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
